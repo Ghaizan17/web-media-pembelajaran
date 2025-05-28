@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Media Pembelajaran Matematika</title>
-  <link rel="shortcut icon" href="asset/smkn2.svg" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Pembelajaran Matematika|Beranda</title>
+    <link rel="shortcut icon" href="asset/smkn2.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             background-color: #f8f9fa;
@@ -17,6 +19,17 @@
             flex: 1;
             min-height: 100vh;
         }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-in-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }        
         .konten.active {
             display: block;
         }
@@ -30,12 +43,13 @@
         }
 
         .nav-link:hover {
+            color: white;
             transition: all 0.3s;
-            transform: scale(1.2);
         }
 
         .nav-link:active {
-            transform: scale(1.5);
+            color: white;
+            transform: scale(1.1);
         }
         .header {
             padding: 20px 0;
@@ -45,6 +59,18 @@
             margin-bottom: 20px;
         }
 
+        /* custom */
+
+        .color-green-custom {
+            color: rgb(10, 231, 10);
+        }
+
+        @media (min-width : 800px) {
+            .width-custom {
+                width: 50%;
+                
+            }
+        }
 
     </style>
 </head>
@@ -64,209 +90,149 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <!-- Menu -->
-            <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
-                <ul class="navbar-nav gap-2">
+            <div class="collapse navbar-collapse  justify-content-end " id="navbarNav">
+                <ul class="nav nav-underline d-flex gap-lg-4">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active text-warning" onclick="tampilkanKonten('konten1')">Beranda</a>
+                        <a class="nav-link active text-warning" aria-current="page" href="index.html">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-warning" onclick="tampilkanKonten('konten2')">Materi</a>
+                        <a class="nav-link text-light" href="materi.html">Materi</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link  text-warning" onclick="tampilkanKonten('konten3')">Kuis</a>
+                        <a class="nav-link text-light hover" href="#">Kuis </a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
     <main>
-<div class="container-fluid p-0 konten active" id="konten1">
-        <div class="bg-body-secondary py-5 ">
-            <div class="container text-center">
-                <h2 class="display-4 fw-bold  ">Selamat Datang di Media Pembelajaran Matematika <i class="bi bi-mortarboard-fill"></i> </h2>
-                <p class="lead">Platform digital untuk belajar dengan mudah, cepat, dan menyenangkan.</p>
-                <a class="btn btn-primary btn-lg mt-3 " onclick="tampilkanKonten('konten2')">Mulai Belajar</a>
-            </div>
-        </div>
-        <!-- Fitur  -->
-        <section id="fitur" class="py-5">
-            <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">Fitur Utama</h2>
-                <p class="text-muted">Kemudahan belajar hanya dalam genggaman</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4 text-center">
-                    <i class="bi bi-laptop fs-1 text-primary"></i>
-                    <h5 class="mt-3">Akses Materi Online</h5>
-                    <p>Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="bi bi-journal-text fs-1 text-primary"></i>
-                    <h5 class="mt-3">Kuis Interaktif</h5>
-                    <p>Uji pemahaman Anda melalui soal-soal dinamis dan realtime feedback.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="bi bi-emoji-laughing fs-1 text-primary"></i>
-                    <h5 class="mt-3">Materi yang menarik</h5>
-                    <p>Materi yang menarik belajar jadi tidak membosankan</p>
-                </div>
-            </div>
-            </div>
-        </section>
-    </div>
-    <div class="container py-5 konten" id="konten2">
+        <div class="container-fluid p-0 konten active">
 
-            <div class="row gap-3 justify-content-center">
-                <!-- materi penjumlahan-->
-                <div class="col-12 col-md-6 col-lg-4 ">
-                    <div class="card course-card h-100 bg-dark">
-                        <div class="card-header bg-dark border-bottom-0">
-                            <span class="text-light text-uppercase small">Materi 1</span>
-                        </div>
-                        <div class="card-body pt-0">
-                            <h3 class="card-title fw-bold mb-3 text-warning">Penjumlahan</h3>
-                            <p class="card-text text-light">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nulla?
-                            </p>
-                        </div>
-                    </div>
+            <div class="bg-dark shadow py-5 pt-5 text-light d-flex column align-items-center">
+                <div class="container text-center  ">
+                    <h2 class="display-4 fw-bold  ">Selamat Datang di Media Pembelajaran Matematika <i class="bi bi-mortarboard-fill"></i> </h2>
+                    <p class="lead">Platform digital untuk belajar dengan mudah, cepat, dan menyenangkan.</p>
+                    <a class="btn btn-warning btn-lg mt-3 shadow " href="materi.html"><i class="bi bi-play-circle-fill "></i> Mulai Belajar</a>
                 </div>
+            </div>
 
-                <!-- pengurangan Card -->
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="card course-card h-100  bg-dark">
-                        <div class="card-header bg-dark border-bottom-0">
-                            <span class="text-light text-uppercase small">Materi 2</span>
+            <!-- tentang  -->
+            <section class="d-flex justify-content-around py-5 my-5 align-items-center reveal ">
+                <div class="d-none d-md-block">
+                    <img src="asset/8202578.jpg" class="rounded-5" width="450px">
+                </div>
+                <div class="text-center width-custom">
+                    <h2 class="fw-bold">Apa itu Website Media Pembelajaran Matematika?</h2>
+                    <div class="text-center">
+                        <p class="lead">Website Media Pembelajaran Matematika adalah website untuk belajar pelajaran matematika yang menyediakan materi pembelajaran yang menarik, mudah diakses, dan sesuai kurikulum.</p>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <section class="d-flex justify-content-around py-5 my-5 align-items-center reveal">
+                <div class="text-center width-custom">
+                    <h2 class="fw-bold">Apa itu Website Media Pembelajaran Matematika?</h2>
+                    <div class="text-center">
+                        <p class="lead">Website Media Pembelajaran Matematika adalah website untuk belajar pelajaran matematika yang menyediakan materi pembelajaran yang menarik, mudah diakses, dan sesuai kurikulum.</p>
+                    </div>
+                </div>
+                <div class="d-none d-md-block">
+                    <img src="asset/8196385.jpg" class="rounded-5" width="450px">
+                </div>
+            </section>
+
+            <!-- Fitur  -->
+            <section id="fitur" class="py-5 reveal">
+                <div class="container">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold">Fitur Utama</h2>
+                        <p class="text-muted">Kemudahan belajar hanya dalam genggaman</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-4 text-center">
+                            <i class="bi bi-laptop fs-1 text-primary"></i>
+                            <h5 class="mt-3">Akses Materi Online</h5>
+                            <p>Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
                         </div>
-                        <div class="card-body pt-0">
-                            <h3 class="card-title fw-bold mb-3 text-warning">Pengurangan</h3>
-                            <p class="card-text text-light">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, hic?
-                            </p>
+                        <div class="col-md-4 text-center">
+                            <i class="bi bi-journal-text fs-1 text-primary"></i>
+                            <h5 class="mt-3">Kuis Interaktif</h5>
+                            <p>Uji pemahaman Anda melalui soal-soal dinamis dan realtime feedback.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="bi bi-emoji-laughing fs-1 text-primary"></i>
+                            <h5 class="mt-3">Materi yang menarik</h5>
+                            <p>Materi yang menarik belajar jadi tidak membosankan</p>
                         </div>
                     </div>
                 </div>
-                <!-- perkalian card -->
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="card course-card h-100  bg-dark">
-                        <div class="card-header bg-dark border-bottom-0">
-                            <span class="text-light text-uppercase small">Materi 3</span>
-                        </div>
-                        <div class="card-body pt-0">
-                            <h3 class="card-title fw-bold mb-3 text-warning">Perkalian</h3>
-                            <p class="card-text text-light">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, hic?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="card course-card h-100  bg-dark">
-                        <div class="card-header bg-dark border-bottom-0">
-                            <span class="text-light text-uppercase small">Materi 4</span>
-                        </div>
-                        <div class="card-body pt-0">
-                            <h3 class="card-title fw-bold mb-3 text-warning">Pembagian</h3>
-                            <p class="card-text text-light">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, hic?
-                            </p>
+            </section>
+            <!-- rekomendasi materi -->
+            <!-- slide show -->
+            <h3 class="text-center reveal fw-bold">Rekomendasi Materi :</h3>
+            <div class="swiper-container position-relative  pt-4 mb-5 reveal">
+                <div class="swiper-pagination "></div>
+                <div class="swiper-wrapper d-inline-flex mb-5">
+
+                    <!-- slide-1 -->
+                    <div class="swiper-slide ">
+                        <div class="container-fluid py-4 px-4"  style="width: 23rem;">
+                            <div class="card bg-dark shadow border-4 ">
+                                <img src="asset/python-animated.gif" class="card-img-top" alt="...">
+                                <div class="card-body text-light">
+                                    <h5 class="card-title text-warning">Penjumlahan</h5>
+                                    <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( + )</span></p>
+                                    <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="card course-card h-100  bg-dark">
-                        <div class="card-header bg-dark border-bottom-0">
-                            <span class="text-light text-uppercase small">Materi 5</span>
-                        </div>
-                        <div class="card-body pt-0">
-                            <h3 class="card-title fw-bold mb-3 text-warning">Akar</h3>
-                            <p class="card-text text-light">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, hic?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="card course-card h-100  bg-dark">
-                        <div class="card-header bg-dark border-bottom-0">
-                            <span class="text-light text-uppercase small">Materi 6</span>
-                        </div>
-                        <div class="card-body pt-0">
-                            <h3 class="card-title fw-bold mb-3 text-warning">faktor</h3>
-                            <p class="card-text text-light">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, hic?
-                            </p>
+
+                    <!-- slide-2 -->
+                    <div class="swiper-slide ">
+                        <div class="container-fluid py-4 px-4"  style="width: 23rem;">
+                            <div class="card bg-dark shadow border-4 ">
+                                <img src="asset/javascript-course-banner.gif" class="card-img-top" alt="...">
+                                <div class="card-body text-light">
+                                    <h5 class="card-title text-warning">Pengurangan</h5>
+                                    <p class="card-text">Operasi hitung dasar matematika <span class="color-green-custom">( - )</span></p>
+                                    <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="card course-card h-100  bg-dark">
-                        <div class="card-header bg-dark border-bottom-0">
-                            <span class="text-light text-uppercase small">Materi 2</span>
-                        </div>
-                        <div class="card-body pt-0">
-                            <h3 class="card-title fw-bold mb-3 text-warning">Pengurangan</h3>
-                            <p class="card-text text-light">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, hic?
-                            </p>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide ">
+                        <div class="container-fluid py-4 px-4"  style="width: 23rem;">
+                            <div class="card bg-dark shadow border-4 ">
+                                <img src="asset/html-parralax-combined.gif" class="card-img-top" alt="...">
+                                <div class="card-body text-light">
+                                    <h5 class="card-title text-warning">Perkalian</h5>
+                                    <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( x )</span></p>
+                                    <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="card course-card h-100  bg-dark">
-                        <div class="card-header bg-dark border-bottom-0">
-                            <span class="text-light text-uppercase small">Materi 2</span>
-                        </div>
-                        <div class="card-body pt-0">
-                            <h3 class="card-title fw-bold mb-3 text-warning">Pengurangan</h3>
-                            <p class="card-text text-light">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, hic?
-                            </p>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide ">
+                        <div class="container-fluid py-4 px-4"  style="width: 23rem;">
+                            <div class="card bg-dark shadow border-4 ">
+                                <img src="asset/seo-bannergif.gif" class="card-img-top" alt="...">
+                                <div class="card-body text-light">
+                                    <h5 class="card-title text-warning">Pembagian</h5>
+                                    <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
+                                    <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-<div class="container quiz-container konten" id="konten3">
-    <!-- Header Kuis -->
-    <div class="row mb-4">
-        <div class="col-md-6">
-            <h2 class="text-dark">Kuis Matematika</h2>
-        </div>
-        <div class="col-md-6 text-end">
-            <div class="badge bg-info text-dark">Waktu: <span id="timer">00:00</span></div>
-            <div class="badge bg-warning text-dark mt-2 mt-md-0">Skor: <span id="score">0</span></div>
-        </div>
-    </div>
-
-    <div class="progress mb-4" style="height: 10px;">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
-    </div>
-
-    <!-- Area Pertanyaan -->
-    <div class="card mb-3">
-        <div class="card-body">
-            <h5 class="card-title" id="question-number">Pertanyaan 1/5</h5>
-            <p class="card-text fs-4" id="question-text">Berapakah hasil dari 2 + 3 × 4?</p>
-        </div>
-    </div>
-
-    <!-- Opsi Jawaban -->
-    <div class="row g-3" id="options-container">
-        <!-- Opsi akan diisi oleh JavaScript -->
-    </div>
-
-    <!-- Navigasi -->
-    <div class="d-flex justify-content-between mt-4">
-        <button class="btn btn-secondary" id="prev-btn" disabled>Sebelumnya</button>
-        <button class="btn btn-primary" id="next-btn">Selanjutnya</button>
-        <button class="btn btn-success d-none" id="submit-btn">Submit Jawaban</button>
-    </div>
-</div>
     </main>
     
     
@@ -281,11 +247,6 @@
         
         <div class="container text-md-left">
             <div class="row text-md-left">
-            <!-- Kolom 1: Brand -->
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Tentang Media Pembelajaran Matematika</h5>
-                <p>Media Pembelajaran Matematika adalah sebuah website untuk belajar secara digital yang dibuat oleh Muhammad Ghaizan Pratama Maulana </p>
-            </div>
 
             <!-- Kolom 2: Navigasi -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -308,7 +269,7 @@
                 <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Kontak</h5>
                 <p><i class="bi bi-geo-alt-fill me-2"></i> Jl. Brigjend H. Hasan Basri No. 6 Kayutangi Banjarmasin</p>
                 <p><i class="bi bi-whatsapp me-1"></i> +62 812-3456-7890</p>
-                <p><i class="bi bi-envelope-at-fill me-2"></i>Ghaizan.Pratama.Maulana@gmail.com</p>
+                <p><i class="bi bi-envelope-at-fill me-2"></i>ghaizan17@gmail.com</p>
             </div>
             </div>
 
@@ -320,9 +281,9 @@
                 <p class="text-center text-md-start">&copy; 2025 by SMKN 2 Banjarmasin <a href="#">Terms</a> <a href="http://">Privacy Policy</a></p>
             </div>
 
-            <div class="col-md-5 col-lg-4 fs-4 text-center">
+            <div class="col-md-5 col-lg-4 fs-4 text-center ">
                 <div class="text-top text-md-end">
-                <a href="#" class="text-light me-3"><i class="bi- bi-instagram"></i></a>
+                <a href="#" class="text-light me-3 "><i class="bi- bi-instagram"></i></a>
                 <a href="#" class="text-light me-3"><i class="bi bi-github"></i></a>
                 <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
@@ -332,15 +293,57 @@
         </div>
     </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function tampilkanKonten(id) {
-        document.querySelectorAll('.konten').forEach(function(el){
-            el.classList.remove('active');
+    <!-- javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // scroll animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            for (let el of reveals) {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const offset = 150;
+
+                if (elementTop < windowHeight - offset) {
+                el.classList.add('active');
+                } else {
+                el.classList.remove('active');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // slide
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                // jika layar >= 0px
+                0: {
+                    slidesPerView: 1,
+                },
+                // jika layar >= 768px
+                768: {
+                    slidesPerView: 2,
+                },
+                // jika layar >= 992px
+                992: {
+                    slidesPerView: 3,
+                }
+            }
         });
-        document.getElementById(id).classList.add('active');
-    }
-  </script>
+
+
+    </script>
 </body>
 </html>
