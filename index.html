@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Media Pembelajaran Matematika|Beranda</title>
+    <title>Skenda e-Learning</title>
     <link rel="shortcut icon" href="asset/smkn2.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -12,7 +12,7 @@
     <style>
         body {
             background-color: #f8f9fa;
-            
+            overflow-x: hidden; /* Tambahkan untuk mencegah scroll horizontal */
         }
 
         main {
@@ -68,10 +68,58 @@
         @media (min-width : 800px) {
             .width-custom {
                 width: 50%;
-                
             }
         }
-
+        
+        /* Perbaikan untuk responsif */
+        @media (max-width: 767px) {
+            section.d-flex {
+                flex-direction: column;
+                gap: 2rem;
+                padding: 0 15px;
+            }
+            
+            .swiper-slide > .container-fluid {
+                width: 100% !important;
+                max-width: 100%;
+                padding: 0 15px;
+            }
+            
+            .card {
+                max-width: 100%;
+            }
+            
+            .navbar-brand span {
+                display: none;
+            }
+        }
+        
+        /* Perbaikan untuk gambar */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Perbaikan untuk footer */
+        @media (max-width: 767px) {
+            footer .container {
+                flex-direction: column;
+            }
+            
+            footer .row {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+        
+        /* Perbaikan untuk swiper */
+        .swiper-container {
+            overflow: hidden;
+        }
+        
+        .swiper-wrapper {
+            flex-wrap: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -83,7 +131,7 @@
             <!-- judul dan logo -->
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <i class="bi bi-mortarboard-fill me-2 fs-4"></i>
-                <span class="d-none d-md-block">Media Pembelajaran Matematika</span>
+                <span class="d-none d-md-block">Skenda e-Learning</span>
             </a>
 
             <!-- hamburger -->
@@ -111,7 +159,7 @@
 
             <div class="bg-dark shadow py-5 pt-5 text-light d-flex column align-items-center">
                 <div class="container text-center  ">
-                    <h2 class="display-4 fw-bold  ">Selamat Datang di Media Pembelajaran Matematika <i class="bi bi-mortarboard-fill"></i> </h2>
+                    <h2 class="display-4 fw-bold  ">Selamat Datang di Skenda e-Learning <i class="bi bi-mortarboard-fill"></i> </h2>
                     <p class="lead">Platform digital untuk belajar dengan mudah, cepat, dan menyenangkan.</p>
                     <a class="btn btn-warning btn-lg mt-3 shadow " href="materi.html"><i class="bi bi-play-circle-fill "></i> Mulai Belajar</a>
                 </div>
@@ -123,18 +171,18 @@
                     <img src="asset/8202578.jpg" class="rounded-5" width="450px">
                 </div>
                 <div class="text-center width-custom">
-                    <h2 class="fw-bold">Apa itu Website Media Pembelajaran Matematika?</h2>
+                    <h2 class="fw-bold">Apa itu Skenda e-Learning?</h2>
                     <div class="text-center">
-                        <p class="lead">Website Media Pembelajaran Matematika adalah website untuk belajar pelajaran matematika yang menyediakan materi pembelajaran yang menarik, mudah diakses, dan sesuai kurikulum.</p>
+                        <p class="lead">Skenda e-Learning adalah website untuk belajar pelajaran matematika yang menyediakan materi pembelajaran yang menarik, mudah diakses, dan sesuai kurikulum.</p>
                     </div>
                 </div>
             </section>
             <!--  -->
             <section class="d-flex justify-content-around py-5 my-5 align-items-center reveal">
                 <div class="text-center width-custom">
-                    <h2 class="fw-bold">Apa itu Website Media Pembelajaran Matematika?</h2>
+                    <h2 class="fw-bold">Apa Keunggulan dari Skenda e-Learning </h2>
                     <div class="text-center">
-                        <p class="lead">Website Media Pembelajaran Matematika adalah website untuk belajar pelajaran matematika yang menyediakan materi pembelajaran yang menarik, mudah diakses, dan sesuai kurikulum.</p>
+                        <p class="lead">Skenda e-Learning memiliki antarmuka pengguna yang menarik dan intuitif, dirancang untuk meningkatkan kenyamanan belajar dan mengurangi kejenuhan. Selain itu, materi yang disajikan dikembangkan secara interaktif dan relevan, sehingga mampu mempertahankan minat serta memaksimalkan pemahaman pengguna.</p>
                     </div>
                 </div>
                 <div class="d-none d-md-block">
@@ -179,7 +227,7 @@
                     <div class="swiper-slide ">
                         <div class="container-fluid py-4 px-4"  style="width: 23rem;">
                             <div class="card bg-dark shadow border-4 ">
-                                <img src="asset/python-animated.gif" class="card-img-top" alt="...">
+                                <img src="asset/penjumlahan.gif" class="card-img-top" alt="...">
                                 <div class="card-body text-light">
                                     <h5 class="card-title text-warning">Penjumlahan</h5>
                                     <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( + )</span></p>
@@ -193,7 +241,7 @@
                     <div class="swiper-slide ">
                         <div class="container-fluid py-4 px-4"  style="width: 23rem;">
                             <div class="card bg-dark shadow border-4 ">
-                                <img src="asset/javascript-course-banner.gif" class="card-img-top" alt="...">
+                                <img src="asset/pengurangan.gif" class="card-img-top" alt="...">
                                 <div class="card-body text-light">
                                     <h5 class="card-title text-warning">Pengurangan</h5>
                                     <p class="card-text">Operasi hitung dasar matematika <span class="color-green-custom">( - )</span></p>
@@ -207,7 +255,7 @@
                     <div class="swiper-slide ">
                         <div class="container-fluid py-4 px-4"  style="width: 23rem;">
                             <div class="card bg-dark shadow border-4 ">
-                                <img src="asset/html-parralax-combined.gif" class="card-img-top" alt="...">
+                                <img src="asset/perkalian.gif" class="card-img-top" alt="...">
                                 <div class="card-body text-light">
                                     <h5 class="card-title text-warning">Perkalian</h5>
                                     <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( x )</span></p>
@@ -221,7 +269,7 @@
                     <div class="swiper-slide ">
                         <div class="container-fluid py-4 px-4"  style="width: 23rem;">
                             <div class="card bg-dark shadow border-4 ">
-                                <img src="asset/seo-bannergif.gif" class="card-img-top" alt="...">
+                                <img src="asset/pembagian.gif" class="card-img-top" alt="...">
                                 <div class="card-body text-light">
                                     <h5 class="card-title text-warning">Pembagian</h5>
                                     <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>

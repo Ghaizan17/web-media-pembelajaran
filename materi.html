@@ -58,6 +58,103 @@
         .color-red-custom {
             color: rgb(255, 255, 255);
         }
+        
+        .column input:focus {
+            border-color: #ffc107;
+            outline: none;
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+        }
+
+        
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border: 2px dashed #dee2e6;
+            margin-top: 20px;
+        }
+        
+        .no-results i {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #6c757d;
+        }
+        
+        .materi-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .materi-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive additions */
+        @media (max-width: 768px) {
+            .navbar-brand span {
+                font-size: 1rem;
+            }
+            
+            .width-custom {
+                width: 90% !important;
+                margin: 0 auto;
+            }
+            
+            .column {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+            
+            .d-flex.gap-2 {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .d-flex.gap-2 button {
+                flex: 1 0 45%;
+                max-width: 45%;
+            }
+            
+            #cardSearch {
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+            
+            .materi-card {
+                width: 100% !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+            }
+            
+            .footer-social {
+                justify-content: center;
+                margin-top: 1rem;
+            }
+        } 
+        
+        @media (max-width: 576px) {
+            .d-flex.gap-2 button {
+                flex: 1 0 100%;
+                max-width: 100%;
+            }
+            
+            .card-title {
+                font-size: 1.1rem;
+            }
+            
+            .card-text {
+                font-size: 0.9rem;
+            }
+            
+            .card img {
+                height: 80px;
+            }
+        } 
     </style>
 </head>
 <body>
@@ -95,30 +192,44 @@
 
     <main>
         <div class="container-fluid p-0 mb-5">
-            <div class=" bg-dark py-5">
-                <div class="text-center width-custom text-light">
-                    <h1>Selamat dan Semangat Belajar🔥</h1>
+            <div class="bg-dark py-5">
+                <div class="text-center width-custom text-light mx-auto" style="width: 80%;">
+                    <h1 class="mb-3">Selamat dan Semangat Belajar🔥</h1>
                     <h5>Web Media Pembelajaran Matematika <i class="bi bi-mortarboard-fill"></i></h5>
                 </div>
             </div> 
         </div>
         <div class="container-fluid">
-            <!-- navigasi -->
-            <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
-                <button onclick="nav('konten1')" class="btn btn-warning border-black border-2 fw-bold  p-1 px-3 rounded-4">Semua</button>
-                <button onclick="nav('konten2')" class="btn btn-warning border-black border-2 fw-bold  p-1 px-3 rounded-4">Mudah</button>
-                <button onclick="nav('konten3')" class="btn btn-warning border-black border-2 fw-bold  p-1 px-3 rounded-4">Sedang</button>
-                <button onclick="nav('konten4')" class="btn btn-warning border-black border-2 fw-bold  p-1 px-3 rounded-4">Sulit</button>
+             <div class="d-flex  align-items-center justify-content-between column column-gap-5 mx-lg-5 px-2 px-lg-3 mb-4">
+                    <div class="d-flex gap-2 mb-2 ">
+                        <button onclick="nav('konten1')" class="btn btn-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Semua</button>
+                        <button onclick="nav('konten2')" class="btn btn-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Mudah</button>
+                        <button onclick="nav('konten3')" class="btn btn-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Sedang</button>
+                        <button onclick="nav('konten4')" class="btn btn-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Sulit</button>
+                    </div>
+                    <input type="search" id="cardSearch" class="form-control rounded-5 border-2 border-warning w-100 w-md-auto" placeholder="Cari Materi...">
+             </div>
+            
+            <!-- Pesan hasil pencarian -->
+            <div id="notFound" class="no-results d-none d-flex">
+                <img src="asset/gambar-orang-bingung.png" alt="" height="350px" >
+                <div class="mt-5 pt-5">
+                    <i class="bi bi-search"></i>
+                    <h4 class="text-secondary">Materi tidak ditemukan</h4>
+                    <p class="text-muted">Coba kata kunci lain seperti "aljabar", "pecahan", atau "penjumlahan"</p>
+                </div>
+                <img src="asset/ogambar-orang-bingung-2-removebg-preview.png" alt="" height="350px">
             </div>
+            
             <!-- materi -->
             
             <!-- nav semua -->
             <div class="konten active" id="konten1">
-                <div class="container-fluid flex-wrap d-flex ">
+                <div class="row d-flex  mx-2" id="cardContainer">
                     <!-- aljabar -->
-                    <div class="container-fluid py-4 px-4 "  style="width: 23rem;" >
-                        <div class="card bg-dark shadow border-4 ">
-                            <img src="asset/python-animated.gif" class="card-img-top" alt="...">
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark shadow border-4 h-100">
+                            <img src="asset/aljabar.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Aljabar</h5>
                                 <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( + )</span></p>
@@ -126,10 +237,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- perkalian -->
-                    <div class="container-fluid py-4 px-4 "  style="width: 23rem;" >
-                        <div class="card bg-dark shadow border-4 ">
-                            <img src="asset/python-animated.gif" class="card-img-top" alt="...">
+                    <!-- penjumlahan -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark shadow border-4 h-100">
+                            <img src="asset/penjumlahan.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Penjumlahan</h5>
                                 <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( + )</span></p>
@@ -138,9 +249,9 @@
                         </div>
                     </div>
                     <!-- pengurangan -->
-                    <div class="container-fluid py-4 px-4  "  style="width: 23rem;" >
-                        <div class="card bg-dark shadow border-4 ">
-                            <img src="asset/javascript-course-banner.gif" class="card-img-top" alt="...">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark shadow border-4 h-100">
+                            <img src="asset/pengurangan.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Pengurangan</h5>
                                 <p class="card-text">Operasi hitung dasar matematika <span class="color-green-custom">( - )</span></p>
@@ -149,9 +260,9 @@
                         </div>
                     </div>
                     <!-- perkalian -->
-                    <div class="container-fluid py-4 px-4 "  style="width: 23rem;" >
-                        <div class="card bg-dark shadow border-4 ">
-                            <img src="asset/html-parralax-combined.gif" class="card-img-top" alt="...">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark shadow border-4 h-100">
+                            <img src="asset/perkalian.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Perkalian</h5>
                                 <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( x )</span></p>
@@ -160,9 +271,9 @@
                         </div>
                     </div>
                     <!-- pembagian -->
-                    <div class="container-fluid py-4 px-4"  style="width: 23rem;">
-                        <div class="card bg-dark shadow border-4 ">
-                            <img src="asset/seo-bannergif.gif" class="card-img-top" alt="...">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
+                        <div class="card bg-dark shadow border-4 h-100">
+                            <img src="asset/pembagian.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Pembagian</h5>
                                 <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
@@ -171,9 +282,9 @@
                         </div>
                     </div>
                     <!-- penjumlahan pecahan -->
-                    <div class="container-fluid py-4 px-4"  style="width: 23rem;">
-                        <div class="card bg-dark shadow border-4 ">
-                            <img src="asset/banner.gif" class="card-img-top" alt="...">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
+                        <div class="card bg-dark shadow border-4 h-100">
+                            <img src="asset/penjumlahan-pecahan.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Pejumlahan Pecahan</h5>
                                 <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
@@ -182,33 +293,33 @@
                         </div>
                     </div>
                     <!-- pengurangan pecahan -->
-                    <div class="container-fluid py-4 px-4"  style="width: 23rem;">
-                        <div class="card bg-dark shadow border-4 ">
-                            <img src="asset/p5courseimage.gif" class="card-img-top" alt="...">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
+                        <div class="card bg-dark shadow border-4 h-100">
+                            <img src="asset/pengurangan-pecahan.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pejumlahan Pecahan</h5>
+                                <h5 class="card-title text-warning">Pengurangan Pecahan</h5>
                                 <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
                                 <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
                             </div>
                         </div>
                     </div>
                     <!-- perkalian pecahan -->
-                    <div class="container-fluid py-4 px-4"  style="width: 23rem;">
-                        <div class="card bg-dark shadow border-4 ">
-                            <img src="asset/p5courseimage.gif" class="card-img-top" alt="...">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
+                        <div class="card bg-dark shadow border-4 h-100">
+                            <img src="asset/perkalian-pecahan.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pejumlahan Pecahan</h5>
+                                <h5 class="card-title text-warning">Perkalian Pecahan</h5>
                                 <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
                                 <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
                             </div>
                         </div>
                     </div>
                     <!-- pembagian pecahan -->
-                    <div class="container-fluid py-4 px-4"  style="width: 23rem;">
-                        <div class="card bg-dark shadow border-4 ">
-                            <img src="asset/p5courseimage.gif" class="card-img-top" alt="...">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
+                        <div class="card bg-dark shadow border-4 h-100">
+                            <img src="asset/pembagian-pecahan.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pejumlahan Pecahan</h5>
+                                <h5 class="card-title text-warning">Pembagian Pecahan</h5>
                                 <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
                                 <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
                             </div>
@@ -217,11 +328,11 @@
                 </div>
             </div>
             <div class="konten" id="konten2">
-                <div class="container-fluid flex-wrap d-flex ">
-                    <!-- perkalian -->
-                    <div class="container-fluid py-4 px-4 "  style="width: 23rem;" >
-                        <div class="card bg-dark shadow border-4 ">
-                            <img src="asset/python-animated.gif" class="card-img-top" alt="...">
+                <div class="row d-flex mx-2" id="cardContainer">
+                    <!-- penjumlahan -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark shadow border-4 h-100">
+                            <img src="asset/penjumlahan.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Penjumlahan</h5>
                                 <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( + )</span></p>
@@ -230,9 +341,9 @@
                         </div>
                     </div>
                     <!-- pengurangan -->
-                    <div class="container-fluid py-4 px-4  "  style="width: 23rem;" >
-                        <div class="card bg-dark shadow border-4 ">
-                            <img src="asset/javascript-course-banner.gif" class="card-img-top" alt="...">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark shadow border-4 h-100">
+                            <img src="asset/pengurangan.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Pengurangan</h5>
                                 <p class="card-text">Operasi hitung dasar matematika <span class="color-green-custom">( - )</span></p>
@@ -241,8 +352,8 @@
                         </div>
                     </div>
                     <!-- perkalian -->
-                    <div class="container-fluid py-4 px-4 "  style="width: 23rem;" >
-                        <div class="card bg-dark shadow border-4 ">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark shadow border-4 h-100">
                             <img src="asset/html-parralax-combined.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Perkalian</h5>
@@ -252,8 +363,8 @@
                         </div>
                     </div>
                     <!-- pembagian -->
-                    <div class="container-fluid py-4 px-4"  style="width: 23rem;">
-                        <div class="card bg-dark shadow border-4 ">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
+                        <div class="card bg-dark shadow border-4 h-100">
                             <img src="asset/seo-bannergif.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Pembagian</h5>
@@ -263,8 +374,8 @@
                         </div>
                     </div>
                     <!-- penjumlahan pecahan -->
-                    <div class="container-fluid py-4 px-4"  style="width: 23rem;">
-                        <div class="card bg-dark shadow border-4 ">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
+                        <div class="card bg-dark shadow border-4 h-100">
                             <img src="asset/banner.gif" class="card-img-top" alt="..." height="100px" >
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Pejumlahan Pecahan</h5>
@@ -274,8 +385,8 @@
                         </div>
                     </div>
                     <!-- pengurangan pecahan -->
-                    <div class="container-fluid py-4 px-4"  style="width: 23rem;">
-                        <div class="card bg-dark shadow border-4 ">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
+                        <div class="card bg-dark shadow border-4 h-100">
                             <img src="asset/p5courseimage.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Pejumlahan Pecahan</h5>
@@ -285,8 +396,8 @@
                         </div>
                     </div>
                     <!-- perkalian pecahan -->
-                    <div class="container-fluid py-4 px-4"  style="width: 23rem;">
-                        <div class="card bg-dark shadow border-4 ">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
+                        <div class="card bg-dark shadow border-4 h-100">
                             <img src="asset/p5courseimage.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title text-warning">Pejumlahan Pecahan</h5>
@@ -296,12 +407,11 @@
                         </div>
                     </div>
                     <!-- pembagian pecahan -->
-                    <div class="container-fluid py-4 px-4"  style="width: 23rem;">
-                        <div class="card bg-dark shadow border-4 ">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
+                        <div class="card bg-dark shadow border-4 h-100">
                             <img src="asset/If0k6Qj.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pembagian
-                                     Pecahan</h5>
+                                <h5 class="card-title text-warning">Pembagian Pecahan</h5>
                                 <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
                                 <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
                             </div>
@@ -313,10 +423,10 @@
     </main>
     <!-- footer -->
     <footer class="bg-dark text-light pt-5 pb-4 mt-5">
-        <div class="container mb-5 d-flex justify-content-between">
-            <div class="d-flex gap-2 fs-2 ">
+        <div class="container mb-5 d-flex justify-content-between flex-column flex-md-row">
+            <div class="d-flex gap-2 fs-2 align-items-center justify-content-center mb-4 mb-md-0">
                 <i class="bi bi-mortarboard-fill"></i> 
-                <span class="fw-bold">Media Pembelajaran Matematika </span>
+                <span class="fw-bold text-center">Media Pembelajaran Matematika </span>
             </div>
         </div>
         
@@ -361,7 +471,7 @@
                 <p class="text-center text-md-start">&copy; 2025 by SMKN 2 Banjarmasin <a href="#">Terms</a> <a href="http://">Privacy Policy</a></p>
             </div>
 
-            <div class="col-md-5 col-lg-4 fs-4 text-center">
+            <div class="col-md-5 col-lg-4 fs-4 text-center footer-social">
                 <div class="text-top text-md-end">
                 <a href="#" class="text-light me-3 "><i class="bi- bi-instagram"></i></a>
                 <a href="#" class="text-light me-3"><i class="bi bi-github"></i></a>
@@ -376,19 +486,37 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // function tampilkanKonten(id) {
-    // //     document.querySelectorAll('.konten').forEach(function(el){
-    // //         el.classList.remove('active');
-    // //     });
-    // //     document.getElementById(id).classList.add('active');
-    // // }
-
     function nav(id) {
         document.querySelectorAll('.konten').forEach(function (el) {
             el.classList.remove('active');
         });
         document.getElementById(id).classList.add('active');
     }
+    
+    // search
+    const searchInput = document.getElementById('cardSearch');
+  const cards = document.querySelectorAll('#cardContainer .card');
+  const notFound = document.getElementById('notFound');
+
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    let matchCount = 0;
+
+    cards.forEach(card => {
+      const title = card.querySelector('.card-title').textContent.toLowerCase();
+      const wrapper = card.closest('.col-12');
+
+      if (title.includes(query)) {
+        wrapper.style.display = '';
+        matchCount++;
+      } else {
+        wrapper.style.display = 'none';
+      }
+    });
+
+    notFound.classList.toggle('d-none', matchCount !== 0);
+  });
+    
   </script>
 </body>
 </html>
