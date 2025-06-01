@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Media Pembelajaran Matematika|Beranda</title>
+  <title>Skenda e-Learning</title>
   <link rel="shortcut icon" href="asset/smkn2.svg" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #021c2d;
             
         }
 
@@ -51,6 +51,12 @@
             height: 100px;
         }
         /* custom class */
+        .bg-custom {
+            background: url(asset/pixel-belajar.gif);
+            background-size: cover;
+            background-position: 50%;
+            
+        }
         .color-green-custom {
             color: rgb(10, 231, 10);
         }
@@ -58,11 +64,31 @@
         .color-red-custom {
             color: rgb(255, 255, 255);
         }
+
+        .bg-navy-custom {
+            background-color: #021c2d;
+        }
+
+        .border-custom {
+            border-width: 2px;
+            border-color: #475762;
+            border-bottom: double #687d8b;
+            border-bottom-width:5px ;
+        }
         
         .column input:focus {
             border-color: #ffc107;
             outline: none;
             box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+        }
+
+        .bg-dark-custom {
+            background-color: #07273d;
+        }
+
+        .color-yellow-custom {
+            color: #ffd900;
+;
         }
 
         
@@ -160,13 +186,13 @@
 <body>
 
     <!-- Header -->
-    <div class="navbar navbar-expand-lg navbar-dark bg-dark py-3 px-3 sticky-top">
+    <div class="navbar navbar-expand-lg bg-navy-custom py-3 px-3 sticky-top border-bottom">
         <div class="container-fluid">
 
             <!-- judul dan logo -->
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <i class="bi bi-mortarboard-fill me-2 fs-4"></i>
-                <span class="d-none d-md-block">Media Pembelajaran Matematika</span>
+                <i class="bi bi-mortarboard-fill me-2 fs-4 text-info"></i>
+                <span class="d-none d-md-block text-light">Skenda e-Learning</span>
             </a>
 
             <!-- hamburger -->
@@ -192,240 +218,59 @@
 
     <main>
         <div class="container-fluid p-0 mb-5">
-            <div class="bg-dark py-5">
-                <div class="text-center width-custom text-light mx-auto" style="width: 80%;">
-                    <h1 class="mb-3">Selamat dan Semangat Belajar🔥</h1>
-                    <h5>Web Media Pembelajaran Matematika <i class="bi bi-mortarboard-fill"></i></h5>
+                <div class="bg-custom shadow py-5 pt-5 text-light d-flex column align-items-center border-bottom " style="height: 100vh;">
+                    <div class="container text-center  ">
+                        <h2 class="display-4 fw-bold text-shadow-custom">Semangat Belajar  <i class="bi bi-mortarboard-fill text-info text-shadow-custom"></i> </h2>
+                        <p class="lead ">Platform digital untuk belajar dengan mudah, cepat, dan menyenangkan.</p>
+                    </div>
                 </div>
-            </div> 
         </div>
         <div class="container-fluid">
-             <div class="d-flex  align-items-center justify-content-between column column-gap-5 mx-lg-5 px-2 px-lg-3 mb-4">
+             <div class="d-flex  align-items-center justify-content-start  column column-gap-5 mx-lg-5 my-5 px-3 px-lg-3  mb-4">
                     <div class="d-flex gap-2 mb-2 ">
-                        <button onclick="nav('konten1')" class="btn btn-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Semua</button>
-                        <button onclick="nav('konten2')" class="btn btn-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Mudah</button>
-                        <button onclick="nav('konten3')" class="btn btn-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Sedang</button>
-                        <button onclick="nav('konten4')" class="btn btn-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Sulit</button>
+                        <button onclick="nav('konten1', event)" class="btn btn-filter btn-outline-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Semua</button>
+                        <button onclick="nav('konten2', event)" class="btn btn-filter btn-outline-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Mudah</button>
+                        <button onclick="nav('konten3', event)" class="btn btn-filter btn-outline-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Sedang</button>
+                        <button onclick="nav('konten4', event)" class="btn btn-filter btn-outline-warning shadow border-1 fw-bold p-1 px-3 rounded-4">Sulit</button>
+
                     </div>
-                    <input type="search" id="cardSearch" class="form-control rounded-5 border-2 border-warning w-100 w-md-auto" placeholder="Cari Materi...">
              </div>
             
-            <!-- Pesan hasil pencarian -->
-            <div id="notFound" class="no-results d-none d-flex">
-                <img src="asset/gambar-orang-bingung.png" alt="" height="350px" >
-                <div class="mt-5 pt-5">
-                    <i class="bi bi-search"></i>
-                    <h4 class="text-secondary">Materi tidak ditemukan</h4>
-                    <p class="text-muted">Coba kata kunci lain seperti "aljabar", "pecahan", atau "penjumlahan"</p>
-                </div>
-                <img src="asset/ogambar-orang-bingung-2-removebg-preview.png" alt="" height="350px">
-            </div>
             
             <!-- materi -->
-            
-            <!-- nav semua -->
-            <div class="konten active" id="konten1">
-                <div class="row d-flex  mx-2" id="cardContainer">
-                    <!-- aljabar -->
+             <div class="container p-0 m-0">
+                <div class="row d-flex mx-2">
+                    <!-- Barisan aritmatika -->
                     <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/aljabar.gif" class="card-img-top" alt="...">
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/eksponen.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Aljabar</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( + )</span></p>
-                                <span class="p-1 px-3 bg-danger rounded-3"><i class="fa-solid fa-chart-simple color-red-custom"></i> Sulit </span>
+                                <h5 class="card-title ">Barisan Aritmaatika</h5>
+                                <p class="card-text">salah satu macam dari Aritmatika</p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
                             </div>
                         </div>
                     </div>
-                    <!-- penjumlahan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/penjumlahan.gif" class="card-img-top" alt="...">
+                    <!-- Deret aritmatika -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/eksponen.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Penjumlahan</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( + )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
+                                <h5 class="card-title ">Deret Aritmaatika</h5>
+                                <p class="card-text">salah satu macam dari Aritmatika</p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
                             </div>
                         </div>
                     </div>
-                    <!-- pengurangan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/pengurangan.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pengurangan</h5>
-                                <p class="card-text">Operasi hitung dasar matematika <span class="color-green-custom">( - )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- perkalian -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/perkalian.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Perkalian</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( x )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- pembagian -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/pembagian.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pembagian</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- penjumlahan pecahan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/penjumlahan-pecahan.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pejumlahan Pecahan</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- pengurangan pecahan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/pengurangan-pecahan.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pengurangan Pecahan</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- perkalian pecahan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/perkalian-pecahan.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Perkalian Pecahan</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- pembagian pecahan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/pembagian-pecahan.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pembagian Pecahan</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="konten" id="konten2">
-                <div class="row d-flex mx-2" id="cardContainer">
-                    <!-- penjumlahan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/penjumlahan.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Penjumlahan</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( + )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- pengurangan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/pengurangan.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pengurangan</h5>
-                                <p class="card-text">Operasi hitung dasar matematika <span class="color-green-custom">( - )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- perkalian -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/html-parralax-combined.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Perkalian</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( x )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- pembagian -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/seo-bannergif.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pembagian</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- penjumlahan pecahan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/banner.gif" class="card-img-top" alt="..." height="100px" >
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pejumlahan Pecahan</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- pengurangan pecahan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/p5courseimage.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pejumlahan Pecahan</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- perkalian pecahan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/p5courseimage.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pejumlahan Pecahan</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- pembagian pecahan -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
-                        <div class="card bg-dark shadow border-4 h-100">
-                            <img src="asset/If0k6Qj.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title text-warning">Pembagian Pecahan</h5>
-                                <p class="card-text">Operasi hitung dsar matematika <span class="color-green-custom">( : )</span></p>
-                                <span class="p-1 px-3 bg-success rounded-3"><i class="fa-solid fa-chart-simple color-green-custom"></i> Mudah </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>           
-            </div> 
-        </div>          
+                </div>                
+             </div>
+        </div>
     </main>
     <!-- footer -->
-    <footer class="bg-dark text-light pt-5 pb-4 mt-5">
+    <footer class="bg-dark-custom text-light pt-5 pb-4 mt-5 border-top">
         <div class="container mb-5 d-flex justify-content-between flex-column flex-md-row">
             <div class="d-flex gap-2 fs-2 align-items-center justify-content-center mb-4 mb-md-0">
-                <i class="bi bi-mortarboard-fill"></i> 
+                <i class="bi bi-mortarboard-fill"></i>   
                 <span class="fw-bold text-center">Media Pembelajaran Matematika </span>
             </div>
         </div>
@@ -487,35 +332,26 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     function nav(id) {
+        // Aktifkan konten sesuai ID
         document.querySelectorAll('.konten').forEach(function (el) {
             el.classList.remove('active');
         });
         document.getElementById(id).classList.add('active');
+
+        // Reset semua tombol
+        document.querySelectorAll('.btn-filter').forEach(function (btn) {
+            btn.classList.remove('bg-warning', 'text-dark');
+            btn.classList.add('btn-outline-warning');
+        });
+
+        // Tambahkan gaya aktif ke tombol yang ditekan
+        const activeBtn = event.currentTarget;
+        activeBtn.classList.remove('btn-outline-warning');
+        activeBtn.classList.add('bg-warning', 'text-dark');
     }
+
+
     
-    // search
-    const searchInput = document.getElementById('cardSearch');
-  const cards = document.querySelectorAll('#cardContainer .card');
-  const notFound = document.getElementById('notFound');
-
-  searchInput.addEventListener('input', function () {
-    const query = this.value.toLowerCase();
-    let matchCount = 0;
-
-    cards.forEach(card => {
-      const title = card.querySelector('.card-title').textContent.toLowerCase();
-      const wrapper = card.closest('.col-12');
-
-      if (title.includes(query)) {
-        wrapper.style.display = '';
-        matchCount++;
-      } else {
-        wrapper.style.display = 'none';
-      }
-    });
-
-    notFound.classList.toggle('d-none', matchCount !== 0);
-  });
     
   </script>
 </body>
