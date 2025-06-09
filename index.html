@@ -12,18 +12,23 @@
 
 
     <style>
+
         body {
             background-color: #f8f9fa;
             overflow-x: hidden;
             background-color: #021c2d;
         }
 
+        body::-webkit-scrollbar {
+            display: none;
+        }
 
         main {
             flex: 1;
             min-height: 100vh;
         }
 
+        /* SCROLL ANIMATION */
         .reveal {
             opacity: 0;
             transform: translateY(50px);
@@ -33,7 +38,9 @@
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
-        }        
+        }
+        
+        /* NAV MATERI */
         .konten.active {
             display: block;
             
@@ -57,28 +64,20 @@
             color: white;
             transform: scale(1.1);
         }
-        .header {
-            padding: 20px 0;
-        }
-        .section-title {
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
 
-        .card img {
-            height: 100px;
+        /* NAV ICON */
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
-
-        /* custom */
-
+        
+        /* CUSTOM BACKGROUND */
         .bg-custom {
             background: url(asset/perpustakaan.gif);
             background-size: cover;
-            background-position: 50%;
-            
+            background-position: 50%; 
         }
 
-         .bg-dark-custom {
+        .bg-dark-custom {
             background-color: #0e2839;
         }       
 
@@ -87,6 +86,7 @@
 
         }
 
+        /* CUSTOM BORDER */
         .border-custom {
             border-width: 2px;
             border-color: #475762;
@@ -94,41 +94,44 @@
             border-bottom-width:5px ;
         }
 
+        .border-yellow-custom {
+            border-width: 3px;
+            border-color: rgb(255, 149, 0);
+            border-bottom: double rgb(255, 149, 0);
+            border-bottom-width: 6px ;
+        }
 
+        .btn-warning:hover{
+            transform: scale(0.95);
+            border-width: 3px;
+            border-color: rgb(255, 149, 0);
+            border-bottom: double rgb(255, 149, 0);
+            border-bottom-width: 6px ;
+        }
+
+
+
+        /* CUSTOM BUTTON */
+        .button-yellow-custom {
+            box-shadow: 2px 2px 2px #021c2d;
+            transition: all 0.3s;
+        }
+
+        .button-yellow-custom:active {
+            box-shadow: inset 2px 2px 2px rgb(255, 149, 0);    
+        }
+
+        /* CUSTOM COLOR */
         .color-green-custom {
             color: rgb(10, 231, 10);
         }
 
+        /* CUSTOM FONT */
         .font-custom {
             font-size: 14px;
         }
 
-        .text-shadow-custom {
-            border: none;
-            text-shadow: 4px 4px 4px #021c2d;
-        }
-
-
-
-        .button-yellow-custom {
-            box-shadow: 2px 2px 2px #021c2d;
-            transition: all 0.5s;
-        }
-
-        .button-yellow-custom:active {
-            box-shadow: inset 2px 2px 2px rgb(21, 20, 20);
-            
-        }
-
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-
-
-        .transition-custom {
-            transition: ease-in-out 0.4s;
-        }
-
+        /* CUSTOM MATERI */
         .materi-card {
             transition: transform 0.3s, box-shadow 0.3s;
         }
@@ -137,13 +140,28 @@
             transform: translateY(-5px);
         }
 
+        .card img {
+            height: 100px;
+        }
+
+        /* CUSTOM TEXT SHADOW */
+        .text-shadow-custom {
+            border: none;
+            text-shadow: 4px 4px 4px #021c2d;
+        }
+
+        /* CUSTOM TRANSITION */
+        .transition-custom {
+            transition: ease-in-out 0.4s;
+        }
+
+        /* RESPONSIVE */
         @media (min-width : 800px) {
             .width-custom {
                 width: 50%;
             }
         }
         
-        /* Perbaikan untuk responsif */
         @media (max-width: 767px) {
             section.d-flex {
                 flex-direction: column;
@@ -166,13 +184,11 @@
             }
         }
         
-        /* Perbaikan untuk gambar */
         img {
             max-width: 100%;
             height: auto;
         }
         
-        /* Perbaikan untuk footer */
         @media (max-width: 767px) {
             footer .container {
                 flex-direction: column;
@@ -250,7 +266,6 @@
             }
         } 
         
-        /* Perbaikan untuk swiper */
         .swiper-container {
             overflow: hidden;
         }
@@ -293,241 +308,279 @@
     </div>
     <main>
         <div class="container-fluid p-0 text-light">
-
             <div class="bg-custom shadow py-5 pt-5 text-light d-flex column align-items-center mb-5 " style="height: 100vh;">
                 <div class="container text-center  ">
                     <h2 class="display-4 fw-bold text-shadow-custom">Selamat Datang di Skenda e-Learning <i class="bi bi-mortarboard-fill text-info text-shadow-custom"></i> </h2>
                     <p class="lead ">Platform digital untuk belajar dengan mudah, cepat, dan menyenangkan.</p>
-                    <a class="btn btn-warning btn-lg mt-3 px-5  fw-bold button-yellow-custom " href="materi.html"><i class="bi bi-play-circle-fill "></i> Mulai Belajar</a>
-                    
-
+                    <a class="btn btn-warning btn-lg mt-3 px-5  fw-bold button-yellow-custom border-yellow-custom " href="materi.html"><i class="bi bi-play-circle-fill "></i> Mulai Belajar</a>
                 </div>
             </div>
+        </div>
+        <div class="container-fluid text-light">
             <div class="container-fluid">
-        <div class="container-fluid">
-            <div class="container-fluid">
+                <!-- nav materi-->
                 <div class="d-flex  align-items-center justify-content-center column column-custom column-gap-5 mx-lg-5 px-2 px-lg-3 mb-4">
-                        <div class="d-flex gap-2 mb-2  ">
-                            <button onclick="nav('konten1', event)" class="btn btn-filter btn-outline-light shadow border-1 fw-bold p-1 px-3 mb-3 rounded-4 transition-custom">Gerbang Logika</button>
-                            <button onclick="nav('konten2', event)" class="btn btn-filter btn-outline-light shadow border-1 fw-bold p-1 px-3 mb-3 rounded-4 transition-custom">Eksponen</button>
-                            <button onclick="nav('konten3', event)" class="btn btn-filter btn-outline-light shadow border-1 fw-bold p-1 px-3 mb-3 rounded-4 transition-custom">Bentuk Akar</button>
-                            <button onclick="nav('konten4', event)" class="btn btn-filter btn-outline-light shadow border-1 fw-bold p-1 px-3 mb-3 rounded-4 transition-custom">Aritmatika</button>
-                        </div>
+                    <div class="d-flex gap-2 mb-2  ">
+                        <button onclick="nav('konten1', event)" class="btn btn-filter btn-outline-light shadow border-1 fw-bold p-1 px-3 mb-3 rounded-4 transition-custom">Gerbang Logika</button>
+                        <button onclick="nav('konten2', event)" class="btn btn-filter btn-outline-light shadow border-1 fw-bold p-1 px-3 mb-3 rounded-4 transition-custom">Eksponen</button>
+                        <button onclick="nav('konten3', event)" class="btn btn-filter btn-outline-light shadow border-1 fw-bold p-1 px-3 mb-3 rounded-4 transition-custom">Bentuk Akar</button>
+                        <button onclick="nav('konten4', event)" class="btn btn-filter btn-outline-light shadow border-1 fw-bold p-1 px-3 mb-3 rounded-4 transition-custom">Aritmatika</button>
+                    </div>
                 </div>
             </div>
+            <!-- materi -->
+            <div class="konten active mb-3 " id="konten1">
+                <div class="row d-flex mx-2" id="cardContainer">
 
-                
-                
-                <!-- materi -->
-                
-                <!-- kategori gerbang loguika -->
-                <div class="konten active mb-5 pb-5" id="konten1">
-                    <div class="row d-flex mx-2" id="cardContainer">
-                        <!-- AND -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/AND.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">AND</h5>
-                                    <p class="card-text">Salah satu jenis dari gerbang logika </p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
+                    <!-- AND -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/AND.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">AND</h5>
+                                <p class="card-text">Salah satu jenis dari gerbang logika </p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
                             </div>
                         </div>
-                        <!-- OR -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/OR.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">OR</h5>
-                                    <p class="card-text">Salah salah satu jenis gerbang logika</p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- NOT -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/NOT.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">NOT</h5>
-                                    <p class="card-text">Salah salah satu jenis gerbang logika</p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- NAND -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/NAND.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">NAND</h5>
-                                    <p class="card-text">Salah salah satu jenis gerbang logika</p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- NOR -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/NOR.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">NOR</h5>
-                                    <p class="card-text">Salah salah satu jenis gerbang logika</p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- XOR -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/perpustakaan.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">XOR</h5>
-                                    <p class="card-text">Salah salah satu jenis gerbang logika</p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- XNOR -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/XNOR.gif"card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">XNOR</h5>
-                                    <p class="card-text">Salah salah satu jenis gerbang logika</p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        
                     </div>
-                </div>
-                <!-- kategori eksponen -->
-                <div class="konten mb-5 pb-5"  id="konten2">
-                    <div class="row d-flex mx-2" id="cardContainer">
-                        <!-- EKSPONEN -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/eksponen.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">Eksponen</h5>
-                                    <p class="card-text">Salah satu jenis dari gerbang logika </p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
+
+                    <!-- OR -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/OR.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">OR</h5>
+                                <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NOT -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/NOT.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">NOT</h5>
+                                <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NAND -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/NAND.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">NAND</h5>
+                                <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NOR -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/NOR.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">NOR</h5>
+                                <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- XOR -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/perpustakaan.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">XOR</h5>
+                                <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- XNOR -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/XNOR.gif"card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">XNOR</h5>
+                                <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- kategori bentuk akar -->
-                <div class="konten mb-5 pb-5" id="konten3">
-                    <div class="row d-flex mx-2" id="cardContainer">
-                        <!-- Bentuk akar -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/bentuk-akar.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">Bentuk Akar</h5>
-                                    <p class="card-text">Penjelasan bentuk akar</p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- menyerdehanakan bentuk akar -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">Menyederhanakan Bentuk Akar</h5>
-                                    <p class="card-text">Penyederhanakan bentuk akar </p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- penjumlahan bentuk akar -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">Penjumlahan Bentuk Akar</h5>
-                                    <p class="card-text">Operasi bentuk akar </p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- pengurangan bentuk akar -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">Pengurangan Bentuk Akar</h5>
-                                    <p class="card-text">Operasi bentuk akar </p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- perkalian bentuk akar -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">Perkalian Bentuk Akar</h5>
-                                    <p class="card-text">Operasi bentuk akar </p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- pembagian bentuk akar -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">Pembagian Bentuk Akar</h5>
-                                    <p class="card-text">Operasi bentuk akar </p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- merasionalkan  bentuk akar -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">Merasionalkan Bentuk Akar</h5>
-                                    <p class="card-text">Operasi bentuk akar </p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
+            </div>
+            <!-- kategori eksponen -->
+            <div class="konten mb-3"  id="konten2">
+                <div class="row d-flex mx-2" id="cardContainer">
+
+                    <!-- EKSPONEN -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/eksponen.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">Eksponen</h5>
+                                <p class="card-text">Salah satu jenis dari gerbang logika </p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- kategori Aritmatika -->
-                 <div class="konten mb-5 pb-5" id="konten4">
-                    <div class="row d-flex mx-2" id="cardContainer">
-                        <!-- Barisan aritmatika -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/eksponen.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">Barisan Aritmaatika</h5>
-                                    <p class="card-text">salah satu macam dari Aritmatika</p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
+            </div>
+            <!-- kategori bentuk akar -->
+            <div class="konten mb-3 " id="konten3">
+                <div class="row d-flex mx-2" id="cardContainer">
+
+                    <!-- Bentuk akar -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/bentuk-akar.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">Bentuk Akar</h5>
+                                <p class="card-text">Penjelasan bentuk akar</p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
                             </div>
                         </div>
-                        <!-- Deret aritmatika -->
-                        <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                            <div class="card bg-dark-custom shadow border-custom h-100">
-                                <img src="asset/eksponen.gif" class="card-img-top" alt="...">
-                                <div class="card-body text-light">
-                                    <h5 class="card-title ">Deret Aritmaatika</h5>
-                                    <p class="card-text">salah satu macam dari Aritmatika</p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
-                                </div>
+                    </div>
+
+                    <!-- menyerdehanakan bentuk akar -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">Menyederhanakan Bentuk Akar</h5>
+                                <p class="card-text">Penyederhanakan bentuk akar </p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- penjumlahan bentuk akar -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">Penjumlahan Bentuk Akar</h5>
+                                <p class="card-text">Operasi bentuk akar </p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- pengurangan bentuk akar -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">Pengurangan Bentuk Akar</h5>
+                                <p class="card-text">Operasi bentuk akar </p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- perkalian bentuk akar -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">Perkalian Bentuk Akar</h5>
+                                <p class="card-text">Operasi bentuk akar </p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- pembagian bentuk akar -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">Pembagian Bentuk Akar</h5>
+                                <p class="card-text">Operasi bentuk akar </p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- merasionalkan  bentuk akar -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">Merasionalkan Bentuk Akar</h5>
+                                <p class="card-text">Operasi bentuk akar </p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- kategori Aritmatika -->
+            <div class="konten mb-3 " id="konten4">
+                <div class="row d-flex mx-2" id="cardContainer">
+
+                    <!-- Barisan aritmatika -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/eksponen.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">Barisan Aritmatika</h5>
+                                <p class="card-text">salah satu macam dari Aritmatika</p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deret aritmatika -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                        <div class="card bg-dark-custom shadow border-custom h-100">
+                            <img src="asset/eksponen.gif" class="card-img-top" alt="...">
+                            <div class="card-body text-light">
+                                <h5 class="card-title ">Deret Aritmatika</h5>
+                                <p class="card-text">salah satu macam dari Aritmatika</p>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a class="btn btn-warning mt-3 px-5  fw-bold button-yellow-custom border-yellow-custom " href="materi.html">Selengkapnya</a>
+            </div>
+            <!-- Fitur  -->
+            <div id="fitur" class="py-5 my-5 reveal">
+                <div class="container">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold">Fitur Utama</h2>
+                        <p class="text-light">Kemudahan belajar hanya dalam genggaman</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-4 text-center">
+                            <i class="bi bi-laptop fs-1 text-primary"></i>
+                            <h5 class="mt-3">Akses Materi Online</h5>
+                            <p>Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="bi bi-journal-text fs-1 text-primary"></i>
+                            <h5 class="mt-3">Kuis Interaktif</h5>
+                            <p>Uji pemahaman Anda melalui soal-soal dinamis dan realtime feedback.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="bi bi-emoji-laughing fs-1 text-primary"></i>
+                            <h5 class="mt-3">Materi yang menarik</h5>
+                            <p>Materi yang menarik belajar jadi tidak membosankan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <section class="d-flex justify-content-around py-5 my-5 align-items-center reveal mb-5 ">
                 <div class="">
                     <img src="asset/foto-materi.jpg" class="rounded-1 border border-1" width="480px">
@@ -547,7 +600,7 @@
                         <p class="lead">Setiap topik disusun secara bertahap, dimulai dari konsep dasar hingga penerapan yang lebih kompleks, sehingga memudahkan siswa dalam memahami alur pembelajaran.</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="">  
                     <img src="asset/foto-materi.jpg" class="rounded-1 border border-1" width="480px">
                 </div>
             </section>
@@ -573,72 +626,51 @@
                     <img src="asset/foto-materi.jpg" class="rounded-1 border border-1" width="480px">
                 </div>
             </section>
-            <!-- Fitur  -->
-            <section id="fitur" class="py-5 reveal">
-                <div class="container">
-                    <div class="text-center mb-4">
-                        <h2 class="fw-bold">Fitur Utama</h2>
-                        <p class="text-light">Kemudahan belajar hanya dalam genggaman</p>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-md-4 text-center">
-                            <i class="bi bi-laptop fs-1 text-primary"></i>
-                            <h5 class="mt-3">Akses Materi Online</h5>
-                            <p>Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <i class="bi bi-journal-text fs-1 text-primary"></i>
-                            <h5 class="mt-3">Kuis Interaktif</h5>
-                            <p>Uji pemahaman Anda melalui soal-soal dinamis dan realtime feedback.</p>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <i class="bi bi-emoji-laughing fs-1 text-primary"></i>
-                            <h5 class="mt-3">Materi yang menarik</h5>
-                            <p>Materi yang menarik belajar jadi tidak membosankan</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-           
+        
         </div>
     </main>
-    
     
     <!-- footer -->
     <footer class="bg-dark-custom text-light pt-5 pb-4 mt-5">
         <div class="container mb-5 d-flex justify-content-between">
             <div class="d-flex gap-2 fs-2 ">
-                <i class="bi bi-mortarboard-fill"></i> 
-                <span class="fw-bold">Media Pembelajaran Matematika </span>
+                <i class="bi bi-mortarboard-fill text-info"></i> 
+                <span class="fw-bold">Skenda e-Learning</span>
             </div>
         </div>
         
         <div class="container text-md-left">
             <div class="row text-md-left">
 
-            <!-- Kolom 2: Navigasi -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Navigasi</h5>
-                <p><a href="#" class="text-light text-decoration-none">Beranda</a></p>
-                <p><a href="#" class="text-light text-decoration-none"> Materi</a></p>
-                <p><a href="#" class="text-light text-decoration-none">Kuis</a></p>
-            </div>
+                  <!-- Kolom 1: Brand -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Tentang Skenda e-Learning</h5>
+                    <p>Skenda e-Learning adalah sebuah website untuk belajar secara digital yang dibuat oleh Muhammad Ghaizan Pratama Maulana </p>
+                </div>
 
-            <!-- Kolom 3: Bantuan -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">LInk Terkait</h5>
-                <p><a href="https://smkn2-bjm.sch.id/" class="text-light text-decoration-none">SMKN2 Banjarmasin</a></p>
-                <p><a href="https://ghaizan17.github.io/e-PKL/" class="text-light text-decoration-none">e-PKL</a></p>
+                <!-- Kolom 2: Navigasi -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Navigasi</h5>
+                    <p><a href="#" class="text-light text-decoration-none">Beranda</a></p>
+                    <p><a href="#" class="text-light text-decoration-none"> Materi</a></p>
+                    <p><a href="#" class="text-light text-decoration-none">Kuis</a></p>
+                </div>
 
-            </div>
+                <!-- Kolom 3: Bantuan -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">LInk Terkait</h5>
+                    <p><a href="https://smkn2-bjm.sch.id/" class="text-light text-decoration-none">SMKN2 Banjarmasin</a></p>
+                    <p><a href="https://ghaizan17.github.io/e-PKL/" class="text-light text-decoration-none">e-PKL</a></p>
 
-            <!-- Kolom 4: Kontak -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-2">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Kontak</h5>
-                <p><i class="bi bi-geo-alt-fill me-2"></i> Jl. Brigjend H. Hasan Basri No. 6 Kayutangi Banjarmasin</p>
-                <p><i class="bi bi-whatsapp me-1"></i> +62 812-3456-7890</p>
-                <p><i class="bi bi-envelope-at-fill me-2"></i>ghaizan17@gmail.com</p>
-            </div>
+                </div>
+
+                <!-- Kolom 4: Kontak -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-2">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Kontak</h5>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Jl. Brigjend H. Hasan Basri No. 6 Kayutangi Banjarmasin</p>
+                    <p><i class="bi bi-whatsapp me-1"></i> +62 812-3456-7890</p>
+                    <p><i class="bi bi-envelope-at-fill me-2"></i>ghaizan17@gmail.com</p>
+                </div>
             </div>
 
             <hr class="my-3">
@@ -651,8 +683,8 @@
 
             <div class="col-md-5 col-lg-4 fs-4 text-center ">
                 <div class="text-top text-md-end">
-                <a href="#" class="text-light me-3 "><i class="bi- bi-instagram"></i></a>
-                <a href="#" class="text-light me-3"><i class="bi bi-github"></i></a>
+                <a href="https://www.instagram.com/gejjjan?igsh=M2d5ZDhyNXNobWcy" class="text-light me-3 "><i class="bi- bi-instagram"></i></a>
+                <a href="https://github.com/Ghaizan17" class="text-light me-3"><i class="bi bi-github"></i></a>
                 <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
                 </div>
@@ -676,12 +708,12 @@
             // Reset semua tombol
             document.querySelectorAll('.btn-filter').forEach(function (btn) {
                 btn.classList.remove('bg-warning', 'text-dark');
-                btn.classList.add('btn-outline-warning');
+                btn.classList.add('btn-outline-light');
             });
 
             // Tambahkan gaya aktif ke tombol yang ditekan
             const activeBtn = event.currentTarget;
-            activeBtn.classList.remove('btn-outline-warning');
+            activeBtn.classList.remove('btn-outline-light');
             activeBtn.classList.add('bg-warning', 'text-dark');
         }
         // scroll animation
