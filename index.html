@@ -9,275 +9,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 
+    <style >
 
-    <style>
-
-        body {
-            background-color: #f8f9fa;
-            overflow-x: hidden;
-            background-color: #021c2d;
-        }
-
-        body::-webkit-scrollbar {
-            display: none;
-        }
-
-        main {
-            flex: 1;
-            min-height: 100vh;
-        }
-
-        /* SCROLL ANIMATION */
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.6s ease-in-out;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* NAV MATERI */
-        .konten.active {
-            display: block;
-            
-        }
-
-        .konten {
-            display: none;
-            
-        }
-
-        .nav-link {
-            transition: all 0.3s;
-        }
-
-        .nav-link:hover {
-            color: white;
-            transition: all 0.3s;
-        }
-
-        .nav-link:active {
-            color: white;
-            transform: scale(1.1);
-        }
-
-        /* NAV ICON */
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-        
-        /* CUSTOM BACKGROUND */
-        .bg-custom {
-            background: url(asset/perpustakaan.gif);
-            background-size: cover;
-            background-position: 50%; 
-        }
-
-        .bg-dark-custom {
-            background-color: #0e2839;
-        }       
-
-        .bg-navy-custom {
-            background-color: #021c2d;
-
-        }
-
-        /* CUSTOM BORDER */
-        .border-custom {
-            border-width: 2px;
-            border-color: #475762;
-            border-bottom: double #687d8b;
-            border-bottom-width:5px ;
-        }
-
-        .border-yellow-custom {
-            border-width: 3px;
-            border-color: rgb(255, 149, 0);
-            border-bottom: double rgb(255, 149, 0);
-            border-bottom-width: 6px ;
-        }
-
-        .btn-warning:hover{
-            transform: scale(0.95);
-            border-width: 3px;
-            border-color: rgb(255, 149, 0);
-            border-bottom: double rgb(255, 149, 0);
-            border-bottom-width: 6px ;
-        }
-
-
-
-        /* CUSTOM BUTTON */
-        .button-yellow-custom {
-            box-shadow: 2px 2px 2px #021c2d;
-            transition: all 0.3s;
-        }
-
-        .button-yellow-custom:active {
-            box-shadow: inset 2px 2px 2px rgb(255, 149, 0);    
-        }
-
-        /* CUSTOM COLOR */
-        .color-green-custom {
-            color: rgb(10, 231, 10);
-        }
-
-        /* CUSTOM FONT */
-        .font-custom {
-            font-size: 14px;
-        }
-
-        /* CUSTOM MATERI */
-        .materi-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .materi-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card img {
-            height: 100px;
-        }
-
-        /* CUSTOM TEXT SHADOW */
-        .text-shadow-custom {
-            border: none;
-            text-shadow: 4px 4px 4px #021c2d;
-        }
-
-        /* CUSTOM TRANSITION */
-        .transition-custom {
-            transition: ease-in-out 0.4s;
-        }
-
-        /* RESPONSIVE */
-        @media (min-width : 800px) {
-            .width-custom {
-                width: 50%;
-            }
-        }
-        
-        @media (max-width: 767px) {
-            section.d-flex {
-                flex-direction: column;
-                gap: 2rem;
-                padding: 0 15px;
-            }
-            
-            .swiper-slide > .container-fluid {
-                width: 100% !important;
-                max-width: 100%;
-                padding: 0 15px;
-            }
-            
-            .card {
-                max-width: 100%;
-            }
-            
-            .navbar-brand span {
-                display: none;
-            }
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        @media (max-width: 767px) {
-            footer .container {
-                flex-direction: column;
-            }
-            
-            footer .row {
-                flex-direction: column;
-                gap: 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar-brand span {
-                font-size: 1rem;
-            }
-            
-            .width-custom {
-                width: 90% !important;
-                margin: 0 auto;
-            }
-            
-            .column-custom {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 1rem;
-            }
-            
-            .d-flex.gap-2 {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .d-flex.gap-2 button {
-                flex: 1 0 45%;
-                max-width: 45%;
-            }
-            
-            #cardSearch {
-                width: 100%;
-                margin-top: 0.5rem;
-            }
-            
-            .materi-card {
-                width: 100% !important;
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-            }
-            
-            .footer-social {
-                justify-content: center;
-                margin-top: 1rem;
-            }
-        } 
-        
-        @media (max-width: 576px) {
-            .d-flex.gap-2 button {
-                flex: 1 0 100%;
-                max-width: 100%;
-            }
-            
-            .card-title {
-                font-size: 1.1rem;
-            }
-            
-            .card-text {
-                font-size: 0.9rem;
-            }
-            
-            .card img {
-                height: 80px;
-            }
-        } 
-        
-        .swiper-container {
-            overflow: hidden;
-        }
-        
-        .swiper-wrapper {
-            flex-wrap: nowrap;
-        }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <div class="navbar navbar-expand-lg bg-navy-custom  py-3 px-3 sticky-top ">
+    <div class="navbar navbar-expand-lg bg-navy-custom  py-3 px-3 sticky-top  border-navy-custom">
         <div class="container-fluid">
 
             <!-- judul dan logo -->
@@ -307,13 +47,14 @@
         </div>
     </div>
     <main>
-        <div class="container-fluid p-0 text-light">
-            <div class="bg-custom shadow py-5 pt-5 text-light d-flex column align-items-center mb-5 " style="height: 100vh;">
-                <div class="container text-center  ">
+        <div class="container-fluid p-0 text-light ">
+            <div class="bg-custom shadow py-5 pt-5 text-light d-flex column  align-items-center mb-5 " style="height: 90vh;">
+                <div class="container text-center">
                     <h2 class="display-4 fw-bold text-shadow-custom">Selamat Datang di Skenda e-Learning <i class="bi bi-mortarboard-fill text-info text-shadow-custom"></i> </h2>
                     <p class="lead ">Platform digital untuk belajar dengan mudah, cepat, dan menyenangkan.</p>
-                    <a class="btn btn-warning btn-lg mt-3 px-5  fw-bold button-yellow-custom border-yellow-custom " href="materi.html"><i class="bi bi-play-circle-fill "></i> Mulai Belajar</a>
-                </div>
+                    <a class="btn btn-warning btn-lg mt-4  px-5 fw-bold button-yellow-custom border-yellow-custom " href="materi.html"><i class="bi bi-play-circle-fill "></i> Mulai Belajar</a>
+
+                </div>       
             </div>
         </div>
         <div class="container-fluid text-light">
@@ -333,15 +74,19 @@
                 <div class="row d-flex mx-2" id="cardContainer">
 
                     <!-- AND -->
+
                     <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
-                        <div class="card bg-dark-custom shadow border-custom h-100">
-                            <img src="asset/AND.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title ">AND</h5>
-                                <p class="card-text">Salah satu jenis dari gerbang logika </p>
-                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                        <a href="and.html" class="text-decoration-none">
+                            <div class="card bg-dark-custom shadow border-custom h-100">
+                                <img src="asset/AND.gif" class="card-img-top" alt="...">
+                                <div class="card-body text-light">
+                                    <h5 class="card-title ">AND</h5>
+                                    <p class="card-text">Salah satu jenis dari gerbang logika </p>
+                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+                        
                     </div>
 
                     <!-- OR -->
@@ -559,24 +304,24 @@
             <div id="fitur" class="py-5 my-5 reveal">
                 <div class="container">
                     <div class="text-center mb-4">
-                        <h2 class="fw-bold">Fitur Utama</h2>
+                        <h2 class="fw-bold ">Fitur Utama</h2>
                         <p class="text-light">Kemudahan belajar hanya dalam genggaman</p>
                     </div>
                     <div class="row g-4">
                         <div class="col-md-4 text-center">
-                            <i class="bi bi-laptop fs-1 text-primary"></i>
-                            <h5 class="mt-3">Akses Materi Online</h5>
+                            <i class="bi bi-laptop fs-1 text-warning "></i>
+                            <h5 class="mt-3 ">Akses Materi Online</h5>
                             <p>Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
                         </div>
                         <div class="col-md-4 text-center">
-                            <i class="bi bi-journal-text fs-1 text-primary"></i>
-                            <h5 class="mt-3">Kuis Interaktif</h5>
-                            <p>Uji pemahaman Anda melalui soal-soal dinamis dan realtime feedback.</p>
+                            <i class="bi bi-emoji-laughing fs-1 text-warning"></i>
+                            <h5 class="mt-3 ">Materi yang menarik</h5>
+                            <p>Materi yang menarik belajar jadi tidak membosankan</p>
                         </div>
                         <div class="col-md-4 text-center">
-                            <i class="bi bi-emoji-laughing fs-1 text-primary"></i>
-                            <h5 class="mt-3">Materi yang menarik</h5>
-                            <p>Materi yang menarik belajar jadi tidak membosankan</p>
+                            <i class="bi bi-journal-text fs-1 text-warning "></i>
+                            <h5 class="mt-3 ">Kuis Interaktif</h5>
+                            <p>Uji pemahaman Anda melalui soal-soal dinamis dan realtime feedback.</p>
                         </div>
                     </div>
                 </div>
@@ -665,7 +410,7 @@
                 </div>
 
                 <!-- Kolom 4: Kontak -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-2">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Kontak</h5>
                     <p><i class="bi bi-geo-alt-fill me-2"></i> Jl. Brigjend H. Hasan Basri No. 6 Kayutangi Banjarmasin</p>
                     <p><i class="bi bi-whatsapp me-1"></i> +62 812-3456-7890</p>
