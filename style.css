@@ -83,6 +83,10 @@
 
         }
 
+        .bg-blue-custom {
+            background-color: #183d55;
+        }
+
         .table-navy-custom {
             --bs-table-color: #fff;
             --bs-table-bg: #183d55;
@@ -144,7 +148,7 @@
         }
 
         .button-yellow-custom:active {
-            border: solid 3px;
+            border: solid 4px;
             border-color: rgb(255, 149, 0) !important ; 
         }
 
@@ -177,6 +181,41 @@
             
         }
 
+        .card-custom {
+            --bs-card-spacer-y: 1rem;
+            --bs-card-spacer-x: 1rem;
+            --bs-card-title-spacer-y: 0.5rem;
+            --bs-card-subtitle-color: ;
+            --bs-card-border-width: var(--bs-border-width);
+            --bs-card-border-color: var(--bs-border-color-translucent);
+            --bs-card-border-radius: var(--bs-border-radius);
+            --bs-card-box-shadow: ;
+            --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+            --bs-card-cap-padding-y: 0.5rem;
+            --bs-card-cap-padding-x: 1rem;
+            --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+            --bs-card-cap-color: ;
+            --bs-card-height: ;
+            --bs-card-color: ;
+            --bs-card-img-overlay-padding: 1rem;
+            --bs-card-group-margin: 0.75rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            height: var(--bs-card-height);
+            color: var(--bs-body-color);
+            word-wrap: break-word;
+            background-clip: border-box;
+            border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+            border-radius: var(--bs-card-border-radius);
+            border-width: 2px;
+            border-color: #687d8b;
+            border-bottom: double #687d8b;
+            border-bottom-width:5px ;
+            
+        }
+
         .margin-custom {
             margin-top: 40px;
         }
@@ -184,6 +223,31 @@
         .card img {
             height: 100px;
         }
+
+        .form-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .btn-form-custom {
+            min-width: 120px;
+        }
+
+#scrollTopBtn {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+      z-index: 999;
+    }
+    #scrollTopBtn.show {
+      opacity: 1;
+      visibility: visible;
+    }
 
 
         /* CUSTOM TEXT SHADOW */
