@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skenda e-Learning</title>
+  <link rel="shortcut icon" href="asset/smkn2.svg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    .form-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="navbar navbar-expand-lg bg-navy-custom  py-3 px-3 sticky-top  border-navy-custom">
+        <div class="container-fluid">
+
+            <!-- judul dan logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-mortarboard-fill me-2 fs-4 text-info"></i>
+                <span class="d-none d-md-block text-light">Skenda e-Learning</span>
+            </a>
+
+            <!-- hamburger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse  justify-content-end " id="navbarNav">
+                <ul class="nav nav-underline d-flex gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link  text-light" aria-current="page" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="materi.html">Materi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light hover" href="kuis.html">Kuis </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning hover" href="kontak.html">Kontak </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+  <div class="container">
+    <div class="form-container bg-dark-custom text-light border-custom card-custom">
+      <h3 class="mb-4">Kontak Kami</h3>
+      <form id="contactForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="name" name="name" required placeholder="Masukkan nama kamu">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required placeholder="Masukkan email kamu">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Pesan</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required placeholder="Tulis pesan kamu di sini"></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-warning transition-custom fw-bold ">Kirim</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Bootstrap -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-navy-custom text-white">
+          <h5 class="modal-title" id="successModalLabel">Pesan Terkirim!</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body bg-dark-custom text-white">
+          Pesan kamu berhasil terkirim. Terima kasih sudah menghubungi kami! 😊
+        </div>
+        <div class="modal-footer border-0 bg-dark-custom ">
+          <button type="button" class="btn btn-outline-warning transition-custom" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault(); // mencegah form submit default
+
+      // --- Logika kirim data di sini ---
+      // Misalnya: AJAX, Fetch API, atau EmailJS.
+      // Untuk demo, langsung tampilkan modal.
+
+      // Reset form
+      contactForm.reset();
+
+      // Tampilkan modal
+      successModal.show();
+    });
+  </script>
+</body>
+</html>

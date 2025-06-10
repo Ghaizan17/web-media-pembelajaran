@@ -35,68 +35,30 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
+
+// Tombol scroll to top
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-// Show/hide button on scroll
 window.addEventListener("scroll", function () {
-    if (window.scrollY > 200) {
+  if (window.scrollY > 200) {
     scrollTopBtn.classList.add("show");
-    } else {
+  } else {
     scrollTopBtn.classList.remove("show");
-    }
+  }
 });
 
-// Manual scroll-up effect
-function scrollStep() {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 0) {
-    window.scrollBy(0, -100); 
-    requestAnimationFrame(scrollStep);
-    }
+// Scroll up dengan smooth scroll
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
 
-scrollTopBtn.addEventListener("click", function () {
-    requestAnimationFrame(scrollStep);
-});
+// event listener tombol
+scrollTopBtn.addEventListener("click", scrollToTop);
+
 
 // latihan mtk
 
-const btnKirim = document.getElementById('btnKirim');
-    const btnCobaLagi = document.getElementById('btnCobaLagi');
-    const resultDiv = document.getElementById('result');
-    const progressBar = document.getElementById('progressBar');
-    const quizForm = document.getElementById('quizForm');
 
-    const correctAnswers = {
-      q1: "1",
-      q2: "Jika kedua input bernilai 1 maka outputnya bernilai 1",
-      q3: "0"
-    };
-
-    btnKirim.addEventListener('click', () => {
-      let correctCount = 0;
-      let totalQuestions = Object.keys(correctAnswers).length;
-      for (let key in correctAnswers) {
-        const selected = quizForm.querySelector(`input[name="${key}"]:checked`);
-        if (selected && selected.value === correctAnswers[key]) {
-          correctCount++;
-        }
-      }
-
-      let score = Math.round((correctCount / totalQuestions) * 100);
-      progressBar.style.width = `${score}%`;
-      progressBar.textContent = `${score}%`;
-
-      if (correctCount === totalQuestions) {
-        resultDiv.innerHTML = `<div class="alert alert-success mt-3">Hebat! Semua jawaban kamu benar! 🎉</div>`;
-      } else {
-        resultDiv.innerHTML = `<div class="alert alert-info mt-3">Kamu benar ${correctCount} dari ${totalQuestions} soal.</div>`;
-      }
-    });
-
-    btnCobaLagi.addEventListener('click', () => {
-      quizForm.reset();
-      progressBar.style.width = '0%';
-      progressBar.textContent = '0%';
-      resultDiv.innerHTML = "";
-    });

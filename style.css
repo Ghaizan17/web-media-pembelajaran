@@ -70,9 +70,12 @@
             opacity: 90%;
         }
 
-        /* .opacity-custom {
-            opacity: 100%;
-        } */
+        .bg-eksponen-custom {
+            background-size: cover;
+            background-position: 50%;
+            background-image: url(asset/eksponen.gif)  ;
+            opacity: 90%;         
+        }
 
         .bg-dark-custom {
             background-color: #0e2839;
