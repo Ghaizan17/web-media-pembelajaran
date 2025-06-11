@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skenda e-Learning</title>
+    <link rel="shortcut icon" href="/web-media-pembelajaran/images/smkn2.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/web-media-pembelajaran/css/style.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <div class="navbar navbar-expand-lg bg-navy-custom py-3 px-3 sticky-top border-navy-custom">
+        <div class="container-fluid me-lg-5 ms-lg-5 pe-lg-5">
+
+            <!-- judul dan logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-mortarboard-fill me-2 fs-4 text-info"></i>
+                <span class="d-none d-md-block text-light">Skenda e-Learning</span>
+            </a>
+
+            <!-- hamburger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse  justify-content-end " id="navbarNav">
+                <ul class="nav nav-underline d-flex gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" aria-current="page" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="materi.html">Materi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light hover" href="kuis.html">Kuis </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light hover" href="kontak.html">Kontak </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="container-fluid p-0 text-light mb-5">
+            <div class="bg-eksponen-custom shadow py-5 pt-5 text-light d-flex column align-items-center mb-5  " style="height: 86vh;">
+                <div class="container text-center text-md-start opacity-custom ">
+                    <span class="p-1 px-5 py-2 border 5 rounded-5 fs-6"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                    <h2 class="display-4 fw-bold text-shadow-custom mt-4">Eksponen</h2>
+                    <p class=" fs-4 text-shadow-custom ">Belajar salah satu jenis dari gerbang logika yaitu gerbang AND</p>
+                    <!-- <a class="btn btn-warning btn-lg mt-3 px-5  fw-bold button-yellow-custom border-yellow-custom " href="materi.html">Mulai </a> -->
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5">
+            <div class="container my-5">
+                <h1 class="text-light mb-5">Eksponen (Pangkat)</h1>
+                <div class="rounded-3 overflow-hidden border border-secondary">
+                    <table class="table table-bordered mb0 m-0">
+                        <thead class="table-navy-custom">
+                            <tr>
+                                <th class="ps-3 ">No.</th>
+                                <th>Tujuan Pembelajaran</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-dark-custom">
+                            <tr>
+                                <td class="ps-3">1.</td>
+                                <td>Memahami makna eksponen</td>
+                            </tr>
+                            <tr>
+                                <td class="ps-3">2</td>
+                                <td>Memahami kasus khusus</td>
+                            </tr>
+                            <tr>
+                                <td class="ps-3">3</td>
+                                <td>Mengetahui sifat-sifat eksponen</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>   
+            </div>
+            <div class="container text-light">
+                <h3 class="mb-3">Pengertian Eksponen</h3>
+                <p>
+                    Eksponen (atau pangkat) adalah konsep matematika yang menyederhanakan penulisan perkalian berulang dari bilangan yang sama. Ini adalah alat yang sangat penting dan banyak digunakan dalam aljabar, sains, teknik, keuangan, dan bidang lainnya.
+                </p>
+                <h3 class="mt-5 mb-3">Konsep Dasar</h3>
+                <ul>
+                    <li><p class="fw-bold">Bentuk umum: <strong class="px-2 rounded-2 bg-dark-custom">aⁿ</strong> </p>
+                        <ul>
+                            <li class="mb-2"><strong class="px-2 rounded-2  bg-dark-custom">a</strong> disebut basis (bilangan pokok yang dikalikan berulang)</li>
+                            <li class="mb-2"><strong class="px-2 rounded-2  bg-dark-custom">a</strong> disebut eksponen atau pangkat (menunjukkan berapa kali basis dikalikan dengan dirinya sendiri)</li>
+                        </ul>
+                    </li>
+                    <li><p><strong>Arti:</strong> <strong class="px-2 rounded-2 bg-dark-custom">aⁿ</strong> berarti <strong class="px-2 rounded-2 bg-dark-custom">a</strong> dikalikan dengan dirinya sebanyak <strong class="px-2 rounded-2 bg-dark-custom">n</strong> kali.</p>
+                        <ul>
+                            <li><strong class="px-2 rounded-2 bg-dark-custom">aⁿ = a × a × a × ... × a</strong> (sebanyak <strong class="px-2 rounded-2 bg-dark-custom">n</strong> faktor)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3 class="mt-5 mb-3">Contoh Sederhana</h3>
+                <ul>
+                    <li class="mb-2"><strong class="px-2 rounded-2 bg-dark-custom">5³ = 5 × 5 × 5 = 125</strong>
+                        <ul>
+                                <li>Basis = 5</li>
+                                <li>Eksponen = 3</li>
+                                <li>Aritnya: 5 dikalikan dengan dirinya sendiri sebanyak 3 kali.</li>
+                        </ul>
+                    </li>
+                    <li class="mb-2"><strong class="px-2 rounded-2 bg-dark-custom">2⁴ = 2 × 2 × 2 × 2 = 16</strong></li>
+                    <li class="mb-2"><strong class="px-2 rounded-2 bg-dark-custom">3² = 3 × 3 = 9</strong> (biasa disebut "tiga kuadrat" atau "tiga pangkat dua")</li>
+                    <li class="mb-2"><strong class="px-2 rounded-2 bg-dark-custom">10³ = 10 × 10 × 10 = 1000</strong>(biasa disebut "sepuluh kubik" atau "sepuluh pangkat tiga")</li>
+                    
+                </ul>
+                <h3 class="mt-5 mb-3">Kasus Khusus yang Penting</h3>
+                <ol>
+                    <li class="mb-4">
+                        <p><strong>Pangkat Nol</strong>(<strong class="px-2 rounded-2 bg-dark-custom">a⁰</strong>)</p>
+                        <ul>
+                            <li class="mb-2">
+                                <strong>
+                                    Setiap bilangan (kecuali 0) yang dipangkatkan 0 hasilnya adalah 1.
+                                </strong>
+                            </li>
+
+                            <li class="mb-2">
+                                <strong class="px-2 rounded-2 bg-dark-custom">
+                                    a⁰ = 1 
+                                </strong> (untuk 
+                                <strong class="px-2 rounded-2 bg-dark-custom">
+                                    a ≠ 0
+                                </strong>)
+                            </li>
+                            <li class="mb-2">contoh: 
+                                <strong class="px-2 rounded-2 bg-dark-custom">
+                                    5⁰ = 1
+                                </strong>,
+                                 <strong class="px-2 rounded-2 bg-dark-custom">
+                                    (-10)⁰ = 1
+                                </strong>,
+                                 <strong class="px-2 rounded-2 bg-dark-custom">
+                                    (¾)⁰ = 1
+                                </strong>
+                            </li>
+                            <li class="mb-2">
+                                <strong>Catatan: <span class="px-2 rounded-2 bg-dark-custom">0⁰</span></strong>adalah bentuk tak tentu (indeterminate form) dalam matematika tingkat lanjut.
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mb-4">
+                        <p><strong>Pangkat Satu (<span class="px-2 rounded-2 bg-dark-custom">a¹</span>)</strong></p>
+                        <ul>
+                            <li>
+                                <strong>Setiap bilangan yang dipangkatkan 1 hasilnya adalah bilangan itu sendiri.</strong>
+                            </li>
+                            <li>
+                                <strong class="px-2 rounded-2 bg-dark-custom">a¹ = a</strong>
+                            </li>
+                            <li>
+                                contoh: <strong class="px-2 rounded-2 bg-dark-custom">8¹ = 8</strong>, <strong class="px-2 rounded-2 bg-dark-custom">(-4)¹ = -4</strong>, <strong class="px-2 rounded-2 bg-dark-custom">0¹ = 0</strong>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mb-4">
+                        <p><strong>Pangkat Negatif (<span class="px-2 rounded-2 bg-dark-custom">a⁻ⁿ</span>)</strong></p>
+                        <ul>
+                            <li class="mb-2">
+                                <strong>Pangkat negatif menunjukkan kebalikan (resiprokal) dari basis yang dipangkatkan positif.</strong>
+                            </li>
+                            <li class="mb-2">
+                                <span>
+                                    <strong class="px-2 rounded-2 bg-dark-custom">a⁻ⁿ = 1 / aⁿ</strong>
+                                    (untuk <strong class="px-2 rounded-2 bg-dark-custom">a ≠ 0</strong> )
+                                </span>
+                            </li>
+                            <li class="mb-2">
+                                Contoh:
+                                <ul>
+                                    <li class="mb-2">
+                                        <strong class="px-2 rounded-2 bg-dark-custom">2⁻³ = 1 / 2³ = 1 / (2×2×2) = 1/8</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <strong class="px-2 rounded-2 bg-dark-custom">5⁻² = 1 / 5² = 1 / 25</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <strong class="px-2 rounded-2 bg-dark-custom">(¾)⁻² = 1 / (¾)² = 1 / (9/16) = 16/9</strong>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <h3 class="mt-5 mb-3">Sifat-sifat eksponen</h3>
+                <p>
+                    Sifat-sifat ini sangat penting untuk memanipulasi dan menyederhanakan ekspresi yang mengandung eksponen:
+                </p>
+                <ol>
+                    <li class="mb-2">
+                        <p><strong class="mb-2">Perkalian Bilangan Berbasis Sama:</strong></p>
+                        <ul>
+                            <li class="mb-2">
+                                <strong class="px-2 rounded-2 bg-dark-custom">aᵐ × aⁿ = aᵐ⁺ⁿ</strong>
+                            </li>
+                            <li class="mb-2">
+                                Ketika mengalikan dua bilangan dengan basis yang sama, tambahkan pangkatnya.
+                            </li>
+                            <li class="mb-2">
+                                Contoh <strong class="px-2 rounded-2 bg-dark-custom">3⁴ × 3² = 3⁴⁺² = 3⁶ = 729</strong>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <p><strong>Pembagian Bilangan Berbasis Sama:</strong></p>
+                        <ul>
+                            <li class="mb-2">
+                                <strong class="px-2 rounded-2 bg-dark-custom">aᵐ / aⁿ = aᵐ⁻ⁿ</strong>(untuk<strong class="px-2 rounded-2 bg-dark-custom">a ≠ 0</strong>)
+                            </li>
+                            <li class="mb-2">
+                                Ketika membagi dua bilangan dengan basis yang sama, kurangkan pangkatnya.
+                            </li>
+                            <li class="mb-2">
+                                <strong>Contoh: <span class="px-2 rounded-2 bg-dark-custom">5⁷ / 5⁴ = 5⁷⁻⁴ = 5³ = 125 </span></strong>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <p><strong>Pangkat dari Suatu Pangkat:</strong></p>
+                        <ul>
+                            <li class="mb-2">
+                                <strong class="px-2 rounded-2 bg-dark-custom">(aᵐ)ⁿ = aᵐˣⁿ</strong>
+                            </li>
+                            <li class="mb-2">
+                                Ketika memangkatkan suatu bilangan yang sudah berpangkat, kalikan pangkatnya.
+                            </li>
+                            <li class="mb-2">
+                                Contoh <strong class="px-2 rounded-2 bg-dark-custom">(2³)⁴ = 2³ˣ⁴ = 2¹² = 4096</strong>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <p><strong>Pangkat dari Suatu Perkalian:</strong></p>
+                        <ul>
+                            <li class="mb-2">
+                                <strong class="px-2 rounded-2 bg-dark-custom">(a × b)ⁿ = aⁿ × bⁿ</strong>
+                            </li>
+                            <li class="mb-2">
+                                Pangkat dari hasil perkalian sama dengan perkalian dari hasil pemangkatan masing-masing faktor.
+                            </li>
+                            <li class="mb-2">
+                                Contoh <strong class="px-2 rounded-2 bg-dark-custom">(3 × 4)² = 3² × 4² = 9 × 16 = 144</strong>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <p><strong>Pangkat dari Suatu Pembagian:</strong></p>
+                        <ul>
+                            <li class="mb-2">
+                                <strong class="px-2 rounded-2 bg-dark-custom">(a / b)ⁿ = aⁿ / bⁿ</strong>(untuk<strong class="px-2 rounded-2 bg-dark-custom">b ≠ 0</strong>)
+                            </li>
+                            <li class="mb-2">
+                                Pangkat dari hasil pembagian sama dengan pembagian dari hasil pemangkatan pembilang dan penyebutnya.
+                            </li>
+                            <li class="mb-2">
+                                Contoh <strong class="px-2 rounded-2 bg-dark-custom">(6 / 2)³ = 6³ / 2³ = 216 / 8 = 27</strong>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <p><strong>Pangkat Pecahan (Akar):</strong></p>
+                        <ul>
+                            <li class="mb-2">
+                                <strong class="px-2 rounded-2 bg-dark-custom">a^(1/n) = ⁿ√a</strong>(Akar pangkat <strong class="px-2 rounded-2 bg-dark-custom">n</strong>)
+                            </li>
+                            <li class="mb-2">
+                                <strong class="px-2 rounded-2 bg-dark-custom">a^(m/n) = (ⁿ√a)ᵐ = ⁿ√(aᵐ)</strong>
+                            </li>
+                            <li class="mb-2">
+                                Pangkat pecahan mewakili akar.
+                            </li>
+                            <li class="mb-2">
+                                Contoh:
+                                <ul>
+                                    <li class="mb-2">
+                                        <strong class="px-2 rounded-2 bg-dark-custom">4^(1/2) = √4 = 2</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <strong class="px-2 rounded-2 bg-dark-custom">8^(2/3) = (∛8)² = 2² = 4</strong> atau
+                                        <strong class="px-2 rounded-2 bg-dark-custom">8^(2/3) = ∛(8²) = ∛64 = 4</strong>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+
+            </div>
+            <div class="container my-5">
+                <div class="ratio ratio-16x9">
+                    <iframe class="rounded-3  shadow" src="https://www.youtube.com/embed/AlrOq3W7IZ4?si=kFF7uRvPtaD9NgjG"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+        <!-- LATIHAN SOAL -->
+        <div class="container mt-5">
+            <div class="card-custom form-container bg-blue-custom text-light p-4">
+                <h3 class="mb-4">Latihan Soal Eksponen</h3>
+                <form id="quizForm">
+                    <!-- Soal 1 -->
+                    <div class="mb-4">
+                        <p><strong>1. Apa yang dimaksud dengan eksponen?</strong></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1a" value="mengalikan dua bilangan dengan basis yang sama, tambahkan pangkatnya.">
+                            <label class="form-check-label" for="q1a">mengalikan dua bilangan dengan basis yang sama, tambahkan pangkatnya.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1b" value="Pangkat dari hasil pembagian sama dengan pembagian dari hasil pemangkatan pembilang dan penyebutnya.">
+                            <label class="form-check-label" for="q1b">Pangkat dari hasil pembagian sama dengan pembagian dari hasil pemangkatan pembilang dan penyebutnya.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1c" value="bilangan pokok yang dikalikan berulang">
+                            <label class="form-check-label" for="q1c">bilangan pokok yang dikalikan berulang</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1d" value="konsep matematika yang menyederhanakan penulisan perkalian berulang dari bilangan yang sama.">
+                            <label class="form-check-label" for="q1d">konsep matematika yang menyederhanakan penulisan perkalian berulang dari bilangan yang sama.</label>
+                        </div>
+                    </div>
+                    <!-- Soal 2 -->
+                    <div class="mb-4">
+                        <p><strong>2. Berapakah hasil dari 2³?</strong></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2a" value="2">
+                            <label class="form-check-label" for="q2a">2</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2b" value="4">
+                            <label class="form-check-label" for="q2b">4</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2c" value="8">
+                            <label class="form-check-label" for="q2c">8</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2d" value="16">
+                            <label class="form-check-label" for="q2d">16</label>
+                        </div>
+                    </div>
+                    <!-- Soal 3 -->
+                    <div class="mb-4">
+                        <p><strong>3. Berapa hasil dari (3 × 4)² ?</strong></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" id="q3a" value="">
+                            <label class="form-check-label" for="q3a">2²</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" id="q3b" value="12²">
+                            <label class="form-check-label" for="q3b">12²</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" id="q3c" value="2¹²">
+                            <label class="form-check-label" for="q3c">2¹²</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" id="q3d" value="14²">
+                            <label class="form-check-label" for="q3d">14²</label>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="progress mb-3">
+                        <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">0%</div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-start gap-2 mb-3">
+                        <button type="button" id="btnKirim" class="btn btn-primary btn-custom">Kirim</button>
+                        <button type="button" id="btnCobaLagi" class="btn btn-secondary btn-custom">Coba Lagi</button>
+                    </div>
+                    <div id="result"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal Warning -->
+        <div class="modal fade" id="modalWarning" tabindex="-1" aria-labelledby="modalWarningLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-navy-custom text-white border-custom ">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title text-warning" id="modalWarningLabel">Peringatan</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                    </div>
+                    <div class="modal-body bg-dark-custom">
+                        Silakan jawab semua pertanyaan terlebih dahulu sebelum mengirim!
+                    </div>
+                    <div class="modal-footer border-0 bg-dark-custom">
+                        <button type="button" class="btn btn-warning transition-custom" data-bs-dismiss="modal">Oke</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Score -->
+        <div class="modal fade" id="modalScore" tabindex="-1" aria-labelledby="modalScoreLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-navy-custom text-light border-custom">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title text-warning" id="modalScoreLabel">Hasil Nilai</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                    </div>
+                    <div class="modal-body bg-dark-custom">
+                        <p id="scoreText">Nilai kamu: 0%</p>
+                    </div>
+                    <div class="modal-footer bg-dark-custom border-0">
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">oke</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Konfirmasi Kirim -->
+        <div class="modal fade" id="modalConfirmSend" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-navy-custom text-white border-custom">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title text-warning">Konfirmasi</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body bg-dark-custom">
+                        Apakah kamu yakin ingin mengirim jawaban?
+                    </div>
+                    <div class="modal-footer bg-dark-custom border-0">
+                        <button id="confirmSendYes" type="button" class="btn btn-warning">Ya</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Konfirmasi Coba Lagi -->
+        <div class="modal fade" id="modalConfirmRetry" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-navy-custom text-white border-custom">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title text-warning">Konfirmasi</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body bg-dark-custom">
+                        Apakah kamu ingin coba lagi? Semua jawaban akan direset.
+                    </div>
+                    <div class="modal-footer bg-dark-custom border-0">
+                        <button id="confirmRetryYes" type="button" class="btn btn-warning">Ya</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <button id="scrollTopBtn" class="btn bg-warning shadow border-0 rounded-circle "><i class="bi bi-arrow-up fs-5"></i></button>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/web-media-pembelajaran/js/script.js"></script>
+        <script>
+            const btnKirim = document.getElementById('btnKirim');
+            const btnCobaLagi = document.getElementById('btnCobaLagi');
+            const progressBar = document.getElementById('progressBar');
+            const quizForm = document.getElementById('quizForm');
+
+            const correctAnswers = {
+            q1: "konsep matematika yang menyederhanakan penulisan perkalian berulang dari bilangan yang sama.",
+            q2: "8",
+            q3: "12²"
+            };
+
+            const modalWarning = new bootstrap.Modal(document.getElementById('modalWarning'));
+            const modalScore = new bootstrap.Modal(document.getElementById('modalScore'));
+            const modalConfirmSend = new bootstrap.Modal(document.getElementById('modalConfirmSend'));
+            const modalConfirmRetry = new bootstrap.Modal(document.getElementById('modalConfirmRetry'));
+            const scoreText = document.getElementById('scoreText');
+
+            let answered = false;
+
+            // Tombol Kirim
+            btnKirim.addEventListener('click', () => {
+            if (answered) return;
+
+            let total = Object.keys(correctAnswers).length;
+            let answeredCount = 0;
+
+            for (let key in correctAnswers) {
+                if (quizForm.querySelector(`input[name="${key}"]:checked`)) answeredCount++;
+            }
+
+            if (answeredCount < total) {
+                modalWarning.show();
+                return;
+            }
+
+            modalConfirmSend.show();
+            });
+
+            // Setelah konfirmasi kirim
+            document.getElementById('confirmSendYes').addEventListener('click', () => {
+            modalConfirmSend.hide();
+
+            let correctCount = 0;
+            for (let key in correctAnswers) {
+                const selected = quizForm.querySelector(`input[name="${key}"]:checked`);
+                if (selected && selected.value === correctAnswers[key]) {
+                correctCount++;
+                }
+            }
+
+            let totalQuestions = Object.keys(correctAnswers).length;
+            let score = Math.round((correctCount / totalQuestions) * 100);
+            progressBar.style.width = `${score}%`;
+            progressBar.textContent = `${score}%`;
+
+            if (correctCount === totalQuestions) {
+                scoreText.textContent = "Selamat, jawaban Anda benar semua!";
+            } else {
+                scoreText.textContent = `Jawaban Anda benar ${correctCount}/${totalQuestions}`;
+            }
+
+            modalScore.show();
+            answered = true;
+
+            // Nonaktifkan semua input radio
+            quizForm.querySelectorAll('input[type="radio"]').forEach(input => {
+                input.disabled = true;
+            });
+            });
+
+            // Tombol Coba Lagi
+            btnCobaLagi.addEventListener('click', () => {
+            modalConfirmRetry.show();
+            });
+
+            // Setelah konfirmasi coba lagi
+            document.getElementById('confirmRetryYes').addEventListener('click', () => {
+            modalConfirmRetry.hide();
+            quizForm.reset();
+            progressBar.style.width = '0%';
+            progressBar.textContent = '0%';
+            answered = false;
+
+            quizForm.querySelectorAll('input[type="radio"]').forEach(input => {
+                input.disabled = false;
+            });
+            });
+    </script>
+
+
+</body>
+</html>

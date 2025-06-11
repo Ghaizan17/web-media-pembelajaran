@@ -51,6 +51,12 @@
             transform: scale(1.1);
         }
 
+        .position-absolute-custom {
+            position: absolute;
+            left: 67.5%;
+            bottom: 4%;
+        }
+
         /* NAV ICON */
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -58,7 +64,7 @@
         
         /* CUSTOM BACKGROUND */
         .bg-custom {
-            background: url(asset/perpustakaan.gif);
+            background: url(/web-media-pembelajaran/images/perpustakaan.gif);
             background-size: cover;
             background-position: 50%; 
         }
@@ -66,14 +72,14 @@
         .bg-and-custom {
             background-size: cover;
             background-position: 50%;
-            background-image: url(asset/AND.gif)  ;
+            background-image: url(/web-media-pembelajaran/images/AND.gif)  ;
             opacity: 90%;
         }
 
         .bg-eksponen-custom {
             background-size: cover;
             background-position: 50%;
-            background-image: url(asset/eksponen.gif)  ;
+            background-image: url(/web-media-pembelajaran/images/eksponen.gif)  ;
             opacity: 90%;         
         }
 
@@ -134,9 +140,25 @@
             border-bottom: solid #194a6c;
         }
 
+        .btn-warning-custom {
+            --bs-btn-color: #000;
+            --bs-btn-bg: #ffc107;
+            --bs-btn-border-color: #ffc107;
+            --bs-btn-hover-color: #000;
+            --bs-btn-hover-bg: #ffca2c;
+            --bs-btn-hover-border-color: #ffc720;
+            --bs-btn-focus-shadow-rgb: 217, 164, 6;
+            --bs-btn-active-color: #000;
+            --bs-btn-active-bg: #ffcd39;
+            --bs-btn-active-border-color: #ffc720;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #000;
+            --bs-btn-disabled-bg: #ffc107;
+            --bs-btn-disabled-border-color: #ffc107;
+        }
         
 
-        .btn-warning:hover{
+        .btn-warning-custom:hover{
             /* transform: scale(0.95); */
             border-width: 3px;
             border-color: rgb(255, 149, 0);
@@ -288,6 +310,7 @@
             
             .card {
                 max-width: 100%;
+                
             }
             
             .navbar-brand span {
@@ -337,10 +360,6 @@
                 max-width: 45%;
             }
             
-            #cardSearch {
-                width: 100%;
-                margin-top: 0.5rem;
-            }
             
             .materi-card {
                 width: 100% !important;

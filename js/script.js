@@ -59,6 +59,5 @@ function scrollToTop() {
 scrollTopBtn.addEventListener("click", scrollToTop);
 
 
-// latihan mtk
 
 
