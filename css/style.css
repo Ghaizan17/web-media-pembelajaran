@@ -51,10 +51,12 @@
             transform: scale(1.1);
         }
 
+
+
         .position-absolute-custom {
             position: absolute;
-            left: 67.5%;
-            bottom: 4%;
+            left: 15%;
+            bottom: 6%;
         }
 
         /* NAV ICON */
@@ -80,6 +82,13 @@
             background-size: cover;
             background-position: 50%;
             background-image: url(/web-media-pembelajaran/images/eksponen.gif)  ;
+            opacity: 90%;         
+        }
+
+        .bg-bentuk-akar-custom {
+            background-size: cover;
+            background-position: 50%;
+            background-image: url(/web-media-pembelajaran/images/bentuk-akar.gif)  ;
             opacity: 90%;         
         }
 
@@ -180,6 +189,10 @@
         /* CUSTOM COLOR */
         .color-green-custom {
             color: rgb(10, 231, 10);
+        }
+
+        .p-left-custom {
+            padding-left: 100px;
         }
 
         /* CUSTOM FONT */
@@ -394,12 +407,13 @@
             .card img {
                 height: 80px;
             }
+
+            .p-left-custom {
+                padding-left: 10px;
+            }
+
+            .position-absolute-custom {
+                display: none;
+            }
         } 
         
-        .swiper-container {
-            overflow: hidden;
-        }
-        
-        .swiper-wrapper {
-            flex-wrap: nowrap;
-        }

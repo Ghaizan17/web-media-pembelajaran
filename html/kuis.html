@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mathtec | Kuis</title>
+  <link rel="shortcut icon" href="/web-media-pembelajaran/images/smkn2.svg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/web-media-pembelajaran/css/style.css">  
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="navbar navbar-expand-lg bg-navy-custom py-3 px-3 sticky-top border-navy-custom">
+        <div class="container-fluid me-lg-5 ms-lg-5 pe-lg-5">
+
+            <!-- judul dan logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-mortarboard-fill me-2 fs-4 text-info"></i>
+                <span class="d-none d-md-block text-light">Mathtec</span>
+            </a>
+
+            <!-- hamburger -->
+            <button class="navbar-toggler transition-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse  justify-content-end " id="navbarNav">
+                <ul class="nav nav-underline d-flex gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-light hover" aria-current="page" href="/web-media-pembelajaran/index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link   text-light hover" href="materi.html">Materi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning hover" href="kuis.html">Kuis </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light hover" href="kontak.html">Kontak </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container-fluid p-0 mb-5">
+                <div class="bg-custom shadow py-5 pt-5 text-light d-flex text-shadow-custom column align-items-center" style="height: 90vh;">
+                    <div class="container text-center  ">
+                        <h2 class="display-4 fw-bold text-shadow-custom">Kuis</h2>
+                        <p class="lead ">Selamat datang di halaman kuis. Silahkan pilih materi yang diinginkan dan mulailah mengerjakan kuis!</p>
+                    </div>
+                </div>
+        </div>
+            <!-- menu kuis -->
+        <div class="row d-flex mx-2" id="cardContainer">
+            <!-- Gerbang Logika -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
+                <div class="card bg-dark-custom shadow border-custom h-100" data-bs-toggle="modal" data-bs-target="#modalAnd">
+                    <img src="/web-media-pembelajaran/images/AND.gif" class="card-img-top" alt="...">
+                    <div class="card-body text-light">
+                        <h5 class="card-title">Gerbang Logika</h5>
+                        <p class="card-text">Semua jenis yang ada di gerbang logika</p>
+                        <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL -->
+            <div class="modal fade" id="modalAnd" tabindex="-1" aria-labelledby="modalAndLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered ">
+                    <div class="modal-content bg-dark-custom text-light border-custom">
+                        <div class="modal-header border-0 bg-navy-custom">
+                            <h5 class="modal-title text-warning" id="modalAndLabel">Pilih Metode</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <p>Silakan pilih jenis soal untuk materi <strong>Gerbang Logika</strong>:</p>
+                            <div class="d-grid gap-2">
+                            <a href="pg-and.html" class="btn btn-warning transition-custom">Pilihan Ganda</a>
+                            <a href="essay-and.html" class="btn btn-secondary transition-custom">Essay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--  aritmatika -->
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                <a href="barisan-aritmatika.html" class="text-decoration-none" >
+                    <div class="card bg-dark-custom shadow border-custom h-100">
+                        <img src="/web-media-pembelajaran/images/eksponen.gif" class="card-img-top" alt="...">
+                        <div class="card-body text-light">
+                            <h5 class="card-title ">Barisan Aritmatika</h5>
+                            <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                            <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+
+            <!-- bentuk akar -->
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                <a href="bentuk-akar.html" class="text-decoration-none">
+                    <div class="card bg-dark-custom shadow border-custom h-100">
+                        <img src="/web-media-pembelajaran/images/bentuk-akar.gif" class="card-img-top" alt="...">
+                        <div class="card-body text-light">
+                            <h5 class="card-title ">Bentuk Akar</h5>
+                            <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                            <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                    </div>
+                </div>
+                </a>
+                
+            </div>
+
+            <!-- deret aritmatika -->
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                <div class="card bg-dark-custom shadow border-custom h-100">
+                    <img src="/web-media-pembelajaran/images/NOT.gif" class="card-img-top" alt="...">
+                    <div class="card-body text-light">
+                        <h5 class="card-title ">Deret Aritmatika</h5>
+                        <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                        <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- eksponen -->
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                <a href="eksponen.html" class="text-decoration-none">
+                    <div class="card bg-dark-custom shadow border-custom h-100">
+                        <img src="/web-media-pembelajaran/images/eksponen.gif" class="card-img-top" alt="...">
+                        <div class="card-body text-light">
+                            <h5 class="card-title ">Eksponen</h5>
+                            <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                            <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                        </div>
+                    </div>
+                </a>       
+            </div>
+
+            <!-- menyederhanakan bentuk akar -->
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                <div class="card bg-dark-custom shadow border-custom h-100">
+                    <img src="/web-media-pembelajaran/images/menyederhanakan-bentuk-akar.gif" class="card-img-top" alt="...">
+                    <div class="card-body text-light">
+                        <h5 class="card-title ">Menyederhanakan Bentuk Akar </h5>
+                        <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                        <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- merasionalkan bentuk akar -->
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                <div class="card bg-dark-custom shadow border-custom h-100">
+                    <img src="/web-media-pembelajaran/images/OR.gif"card-img-top" alt="...">
+                    <div class="card-body text-light">
+                        <h5 class="card-title ">Merasionalkan Bentuk Akar</h5>
+                        <p class="card-text">Salah salah satu jenis gerbang logika</p>
+                        <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <button id="scrollTopBtn" class="btn bg-warning shadow border-0 rounded-circle "><i class="bi bi-arrow-up fs-5"></i></button>
+    <!-- footer -->
+    <footer class="bg-dark-custom text-light pt-5 pb-4 mt-5 ">
+        <div class="container mb-5 d-flex justify-content-between flex-column flex-md-row">
+            <div class="d-flex gap-2 fs-2 align-items-center justify-content-center mb-4 mb-md-0">
+                <i class="bi bi-mortarboard-fill text-info"></i>   
+                <span class="fw-bold text-center"> Mathtec</span>
+            </div>
+        </div>
+        
+        <div class="container text-md-left">
+            <div class="row text-md-left">
+                <!-- Kolom 1: Brand -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Tentang Mathtec</h5>
+                    <p>Mathtec adalah sebuah website media pembelajaran untuk belajar Matematika secara digital yang memiliki tampilan yang menarik dan tidak membosankan</p>
+                </div>
+
+                <!-- Kolom 2: Bantuan -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">LInk Terkait</h5>
+                    <p><a href="https://smkn2-bjm.sch.id/" class="text-light text-decoration-none">SMKN2 Banjarmasin</a></p>
+                    <p><a href="https://ghaizan17.github.io/e-PKL/" class="text-light text-decoration-none">e-PKL</a></p>
+
+                </div>
+
+                <!-- Kolom 3: Kontak -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-2">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Kontak</h5>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Jl. Brigjend H. Hasan Basri No. 6 Kayutangi Banjarmasin</p>
+                    <p><i class="bi bi-whatsapp me-1"></i> +62 812-3456-7890</p>
+                    <p><i class="bi bi-envelope-at-fill me-2"></i>ghaizan17@gmail.com</p>
+                </div>
+            </div>
+
+            <hr class="my-3">
+
+            <!-- Copyright -->
+            <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8 mt-4">
+                <p class="text-center text-md-start">&copy; 2025 by SMKN 2 Banjarmasin <a href="#">Terms</a> <a href="http://">Privacy Policy</a></p>
+            </div>
+
+            <div class="col-md-5 col-lg-4 fs-4  text-center footer-social ">
+                <div class="text-top text-md-end">
+                    <a href="https://www.instagram.com/gejjjan?igsh=M2d5ZDhyNXNobWcy" class="text-light me-3"><i class="bi- bi-instagram"></i></a>
+                    <a href="https://github.com/Ghaizan17" class="text-light me-3 "><i class="bi bi-github"></i></a>
+                    <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/web-media-pembelajaran/js/script.js"></script>
+  <script>
+    function nav(id) {
+        // Aktifkan konten sesuai ID
+        document.querySelectorAll('.konten').forEach(function (el) {
+            el.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+
+        // Reset semua tombol
+        document.querySelectorAll('.btn-filter').forEach(function (btn) {
+            btn.classList.remove('bg-warning', 'text-dark');
+            btn.classList.add('btn-outline-light');
+        });
+
+        // Tambahkan gaya aktif ke tombol yang ditekan
+        const activeBtn = event.currentTarget;
+        activeBtn.classList.remove('btn-outline-light');
+        activeBtn.classList.add('bg-warning', 'text-dark');
+    }
+
+
+    
+    
+  </script>
+</body>
+</html>
