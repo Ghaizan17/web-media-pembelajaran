@@ -13,22 +13,22 @@
 </head>
 <body>
     <!-- Header -->
-    <div class="navbar navbar-expand-lg bg-navy-custom  py-3 px-3 sticky-top  border-navy-custom">
+    <div class="navbar navbar-expand-lg bg-navy-custom  py-3 px-3 sticky-top  border-navy-custom" id="dor">
         <div class="container-fluid me-lg-5 ms-lg-5 pe-lg-5">
 
             <!-- judul dan logo -->
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <i class="bi bi-mortarboard-fill me-2 fs-4 text-info"></i>
-                <span class="d-none d-md-block text-light">Mathtec</span>
+                <span class="d-none d-md-block text-light fw-bold" >Mathtec</span>
             </a>
 
             <!-- hamburger -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon "></span>
+            <button class="navbar-toggler transition-custom border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Menu -->
             <div class="collapse navbar-collapse  justify-content-end " id="navbarNav">
-                <ul class="nav nav-underline d-flex gap-lg-4">
+                <ul class="nav nav-underline d-flex gap-lg-4 align-items-center fw-bold">
                     <li class="nav-item">
                         <a class="nav-link active text-warning" aria-current="page" href="index.html">Beranda</a>
                     </li>
@@ -41,28 +41,130 @@
                     <li class="nav-item">
                         <a class="nav-link text-light hover" href="/web-media-pembelajaran/html/kontak.html">Kontak </a>
                     </li>
+                    <li class="nav-item">
+                        <a onclick="ubah()" class="text-light text-decoration-none" id="nightmode"><i class="fa fa-moon text-warning"></i> Dark</a>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </div>
     <main>
-        <div class="container-fluid p-0 text-light ">
-            <div class="bg-custom shadow py-5 pt-5 text-light d-flex column  align-items-center mb-5 " style="height: 90vh;">
+        <!-- banner awal -->
+        <div class="container-fluid p-0 text-white ">
+            <div class="bg-custom shadow py-5 pt-5 text-white d-flex column  align-items-center  " style="height: 90vh;">
                 <div class="container text-center">
-                    <h2 class="display-4 fw-bold text-shadow-custom">Selamat Datang di Mathtec <i class="bi bi-mortarboard-fill text-info text-shadow-custom"></i> </h2>
-                    <p class="lead ">Platform digital untuk belajar dengan mudah, cepat, dan menyenangkan.</p>
+                    <h2 class="display-4 fw-bold text-shadow-custom">
+                        Selamat Datang di Mathtec 
+                        <i class="bi bi-mortarboard-fill text-info text-shadow-custom"></i> 
+                    </h2>
+                    <p class=" text-shadow-custom fs-5 ">
+                        Platform digital untuk belajar dengan mudah, cepat, dan menyenangkan.
+                    </p>
                     <a class="btn btn-warning-custom btn-lg mt-4  px-5 fw-bold button-yellow-custom border-yellow-custom " href="/web-media-pembelajaran/html/materi.html"><i class="bi bi-play-circle-fill "></i> Mulai Belajar</a>
 
                 </div>       
             </div>
         </div>
-        <div class="container-fluid text-light">
-            <h4 class="text-center text-warning mb-3">Mulailah Pembelajaran Matematika Kamu Hari Ini 😎</h4>
+
+        <div class="container-fluid text-light p-4">
+            <!-- penjelasan mengenai mathtec -->
+            <div class="text-light m-md-3 m-lg-0">
+                <div class="d-flex justify-content-center align-items-center reveal  mt-5 pt-5  ">
+                    <div class="text-start width-custom col-md-4 ps-lg-5 ps-md-0 flex-column justify-content-center mt-5 mt-md-0 align-items-center">
+                        <h1 class="fw-bold text-warning">Apa itu Mathtec ?</h1>
+                        <div class="text-start ">
+                            <p class="mt-3 fs-5">
+                                Mathtec adalah sebuah website media pembelajaran inovatif yang dirancang khusus untuk membantu siswa dalam mempelajari Matematika secara digital. Website ini hadir sebagai solusi modern dalam dunia pendidikan dengan menghadirkan berbagai materi pelajaran Matematika yang disajikan secara menarik, interaktif, dan mudah dipahami. Tidak hanya menyuguhkan teori, Mathtec juga dilengkapi dengan berbagai latihan soal, kuis interaktif, dan animasi pembelajaran yang membuat proses belajar menjadi lebih menyenangkan dan tidak membosankan.
+                            </p>
+            
+                        </div>
+                    </div>
+
+                    <div class="d-none d-md-block">  
+                        <img src="/web-media-pembelajaran/images/perpustakaan.gif" class="rounded-3 card-custom border-custom m-5" width="82%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-light m-md-3 m-lg-0">
+                <!-- penjelasan kenapa belajar di mathtec -->
+                <div class="d-flex justify-content-center  align-items-center reveal mb-5 pb-5 ">
+                    <div class="d-none d-md-block">  
+                        <img src="/web-media-pembelajaran/images/pixel-belajar.gif" class="rounded-3 card-custom border-custom m-lg-5" width="80%">
+                    </div>
+                    <div class="text-start width-custom col-md-4 ps-lg-5  ps-md-0 flex-column justify-content-center mt-5 mt-md-0 align-items-center pe-md-5">
+                        <h1 class="fw-bold  text-warning">Kenapa Belajar di sini ?</h1>
+                        <div class="text-start ">
+                            <p class="mt-3 fs-5">
+                                Karena website ini menyediakan materi pelajaran Matematika yang lengkap dan terstruktur, sesuai dengan kurikulum terbaru yang diterapkan di Indonesia. Setiap materi disusun dengan cermat oleh tim yang berkompeten, sehingga dapat mendukung proses pembelajaran baik di sekolah maupun secara mandiri di rumah. Tidak hanya fokus pada kelengkapan isi, penyajian materi di dalam website ini juga dirancang agar mudah dipahami oleh semua kalangan pelajar, mulai dari tingkat dasar, menengah, hingga lanjutan.
+                            </p>
+            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br><br><br>
+
+            <!-- fitur utama mathtec -->
+             <div class="container p-0">
+                <div class=" row d-flex mx-2 justify-content-start justify-content-md-center justify-content-lg-center  mb-5 pb-5 reveal">
+                    
+                    <div class=" text-start px-0 px-md-5 mx-md-5 mb-4">
+                        <h2 class="fw-bold text-md-center text-warning mb-md-2 ">Fitur Utama Mathtec</h2>
+                        <div class="d-flex justify-content-center text-start text-md-center pe-md-5 ps-md-5 ">
+                            <p class=" p-0 p-md-2 pe-md-5 ps-md-5 fs-5">
+                                Karena web ini menyediakan materi matematika yang lengkap, sesuai kurikulum terbaru, serta disajikan dengan cara yang mudah dipahami dan menarik untuk semua jenjang pendidikan.
+                            </p>       
+                        </div>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 animation-card  py-4 px-4" >
+                        <div class="card bg-black-custom shadow border-custom h-100">
+                            <i class="bi bi-laptop text-warning font-70px-custom text-center"></i>
+                            <div class="p-1 px-3 text-light">
+                                <h5 class="card-title text-center mb-2 fw-bold">Kukirikulum Terstruktur</h5>
+                                <p class="font-custom text-center">Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
+                            </div>
+                        </div>
+                    </div>     
+
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 animation-card  py-4 px-4" >
+                        <div class="card bg-black-custom shadow border-custom h-100 ">
+                            <i class="bi bi-emoji-laughing text-warning font-70px-custom text-center"></i>
+                            <div class=" px-3 text-light">
+                                <h5 class="card-title text-center mb-2 fw-bold">Materi yang Menarik</h5>
+                                <p class="font-custom text-center">Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 animation-card  py-4 px-4" >
+                        <div class="card bg-black-custom shadow border-custom h-100">
+                            <i class="bi bi-journal-text text-warning font-70px-custom text-center"></i>
+                            <div class="p-1 px-3 text-light">
+                                <h5 class="card-title text-center mb-2 fw-bold">Kuis Interaktif</h5>
+                                <p class="font-custom text-center">Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+             </div>
+
+            <br><br>
+
+            
+            <!-- preview materi -->
+            <h4 class="text-center text-warning mb-3 mt-5 pt-5">Mulailah Pembelajaran Matematika Kamu Hari Ini 😎</h4>
             <div class="container d-flex justify-content-center mb-5">
                 <p class="text-center">Bergabunglah dengan Mathtec dan temukan dunia pembelajaran matematika yang interaktif dan menyenangkan. </p>
             </div>
-            <div class="konten active mb-3 " id="konten1">
-                <div class="row d-flex mx-2" id="cardContainer">
+            <div class="container konten active mb-3 " id="konten1">
+                <div class=" row d-flex mx-2 " id="cardContainer">
 
                     <!-- AND -->
                     <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
@@ -125,93 +227,7 @@
                 <a class="btn btn-warning-custom mt-3 px-5  fw-bold button-yellow-custom border-yellow-custom " href="/web-media-pembelajaran/html/materi.html">Selengkapnya</a>
             </div>
 
-            <!-- Fitur  -->
-            <div id="fitur" class="py-5 my-5 reveal">
-                <div class="container">
-                    <div class="text-center mb-4">
-                        <h2 class="fw-bold ">Fitur Utama</h2>
-                        <p class="text-light">Kemudahan belajar hanya dalam genggaman</p>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-md-4 text-center">
-                            <i class="bi bi-laptop fs-1 text-warning "></i>
-                            <h5 class="mt-3 ">Akses Materi Online</h5>
-                            <p>Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <i class="bi bi-emoji-laughing fs-1 text-warning"></i>
-                            <h5 class="mt-3 ">Materi yang menarik</h5>
-                            <p>Materi yang menarik belajar jadi tidak membosankan</p>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <i class="bi bi-journal-text fs-1 text-warning "></i>
-                            <h5 class="mt-3 ">Kuis Interaktif</h5>
-                            <p>Uji pemahaman Anda melalui soal-soal dinamis dan realtime feedback.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section class="d-flex justify-content-evenly py-5 my-5 align-items-center reveal mb-5 ">
-                <div class="">
-                    <img src="/web-media-pembelajaran/images/foto-beranda.jpg" class="rounded-1 border border-1" width="480px">
-                </div>
-                <div class="text-start width-custom">
-                    <h2 class="fw-bold">Keunggulan Website Mathtec</h2>
-                    <div class="text-start">
-                        <p class="lead">Website ini dirancang khusus untuk menyajikan materi pembelajaran matematika yang lengkap, terstruktur, dan mudah dipahami oleh berbagai jenjang pendidikan. Setiap materi disusun berdasarkan kurikulum terbaru, sehingga relevan dengan kebutuhan pembelajaran di sekolah maupun pembelajaran mandiri di rumah.</p>
-
-                    </div>
-                </div>
-            </section>
-            <section class="d-flex justify-content-evenly py-5 my-5 align-items-center reveal mb-5 mt-5">
-                <div class="text-start width-custom ">
-                    <h2 class="fw-bold">Materi Terstruktur dan Sistematis</h2>
-                    <div class="text-start ">
-                        <p class="lead">Setiap topik disusun secara bertahap, dimulai dari konsep dasar hingga penerapan yang lebih kompleks, sehingga memudahkan siswa dalam memahami alur pembelajaran.</p>
-                    </div>
-                </div>
-                <div class="">  
-                    <img src="/web-media-pembelajaran/images/foto-materi.jpg" class="rounded-3 card-custom border-custom" width="480px">
-                </div>
-            </section>
-            <section class="d-flex justify-content-evenly py-5 my-5 align-items-center reveal mb-5 mt-5">
-                <div class="">
-                    <img src="/web-media-pembelajaran/images/foto-penjelasan.jpg" class="rounded-3 border-custom card-custom " width="480px">
-                </div>
-                <div class="text-start width-custom">
-                    <h2 class="fw-bold">Dilengkapi dengan Latihan dan Pembahasan</h2>
-                    <div class="text-start">
-                        <p class="lead">Setiap materi disertai soal latihan interaktif serta pembahasan lengkap, sehingga siswa dapat langsung mengukur dan meningkatkan pemahamannya.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="d-flex justify-content-evenly py-5 my-5 align-items-center reveal mb-5 mt-5">
-                <div class="text-start width-custom">
-                    <h2 class="fw-bold">Kuis Interaktif dan Menarik</h2>
-                    <div class="text-start">
-                        <p class="lead">Disajikan dalam format digital yang responsif dan mudah digunakan, kuis dirancang agar siswa dapat belajar sambil bermain, membuat proses belajar terasa lebih</p>
-                    </div>
-                </div>
-                <div class="">
-                    <img src="/web-media-pembelajaran/images/kuis.jpg" class="rounded-3 card-custom border-custom" width="480px">
-                </div>
-            </section>
-            <section class="d-flex justify-content-center  py-5 my-5 align-items-center reveal p-left-custom mb-5 mt-5" >
-                <div class="position-absolute-custom z-3 ">
-                    <img src="/web-media-pembelajaran/images/ibumariani.png" class="rounded-1" width="250px">
-                </div>
-                <div class="text-start width-custom bg-dark-custom p-5 rounded-1 border-custom card text-light">
-                    <h2 class="fw-bold">Mariani S.Pd</h2>
-                    <div class="text-start">
-                        <p class="lead">Mariani S.Pd adalah seorang guru matematika dari SMKN 2 Banjarmasin yang mengajar di jurusan PPLG sejak tahun 2017</p>
-                    </div>
-                    <ul class="d-flex gap-3 list-unstyled flex-wrap">
-                        <li><a href="" class="text-white">@Mariani</a></li>
-                        <li><i class="bi bi-mortarboard-fill"></i> Guru Matematika</li>
-                        <li><i class="fa fa-school"></i> SMKN 2 Banjarmasin</li>
-                    </ul>
-                </div>
-            </section>
+            
             <br>
             <br>
         
@@ -220,7 +236,7 @@
         <button id="scrollTopBtn" class="btn bg-warning shadow border-0 rounded-circle"><i class="bi bi-arrow-up fs-5"></i></button>
     </main>
     <!-- footer -->
-    <footer class="bg-dark-custom text-light pt-5 pb-4 mt-5">
+    <footer class="bg-dark-custom text-light pt-5 pb-4 mt-5 border-top-navy-custom">
         <div class="container mb-5 d-flex justify-content-between">
             <div class="d-flex gap-2 fs-2 ">
                 <i class="bi bi-mortarboard-fill text-info"></i> 

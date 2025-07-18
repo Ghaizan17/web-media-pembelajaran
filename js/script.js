@@ -7,8 +7,8 @@ function nav(id) {
 
     // Reset semua tombol
     document.querySelectorAll('.btn-filter').forEach(function (btn) {
-        btn.classList.remove('bg-warning', 'text-dark');
-        btn.classList.add('btn-outline-light');
+        btn.classList.remove('bg-warning' , 'text-dark');
+        btn.classList.add('btn-outline-light' , 'text-light');
     });
 
     // Tambahkan gaya aktif ke tombol yang ditekan
@@ -36,6 +36,55 @@ window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
 
+
+
+
+
+
+
+
+function ubah() {
+    const body = document.body;
+    const icon = document.getElementById("nightmode").firstElementChild;
+    const teks = document.getElementById("nightmode");
+
+
+    // Toggle ke light mode
+    body.classList.toggle("light-mode");
+
+    // Simpan preferensi di localStorage
+    if (body.classList.contains("light-mode")) {
+        localStorage.setItem("theme", "light");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+        teks.innerHTML = '<i class="fa fa-sun text-warning"></i> Light';
+        
+    } else {
+        localStorage.setItem("theme", "night");
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+        teks.innerHTML = '<i class="fa fa-moon text-warning"></i> Dark';
+        
+    }
+}
+
+// Terapkan preferensi saat halaman dimuat
+window.onload = function () {
+    const body = document.body;
+    const icon = document.getElementById("nightmode").firstElementChild;
+    const savedTheme = localStorage.getItem("theme");
+    const teks = document.getElementById("nightmode");
+    
+    if (savedTheme === "light") {
+        body.classList.add("light-mode");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+        teks.innerHTML = '<i class="fa fa-sun text-warning"></i> Light';
+        
+    }
+};
+
+
 // Tombol scroll to top
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
@@ -57,7 +106,5 @@ function scrollToTop() {
 
 // event listener tombol
 scrollTopBtn.addEventListener("click", scrollToTop);
-
-
 
 
