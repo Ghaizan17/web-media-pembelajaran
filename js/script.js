@@ -35,14 +35,6 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
-
-
-
-
-
-
-
-
 function ubah() {
     const body = document.body;
     const icon = document.getElementById("nightmode").firstElementChild;
