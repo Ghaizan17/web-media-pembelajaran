@@ -49,13 +49,13 @@ function ubah() {
         localStorage.setItem("theme", "light");
         icon.classList.remove("fa-moon");
         icon.classList.add("fa-sun");
-        teks.innerHTML = '<i class="fa fa-sun text-warning"></i> Light';
+        teks.innerHTML = '<i class="fa fa-sun text-warning"></i><span>Light</span>';
         
     } else {
         localStorage.setItem("theme", "night");
         icon.classList.remove("fa-sun");
         icon.classList.add("fa-moon");
-        teks.innerHTML = '<i class="fa fa-moon text-warning"></i> Dark';
+        teks.innerHTML = '<i class="fa fa-moon text-warning"></i><span>Dark</span>';
         
     }
 }
@@ -98,5 +98,7 @@ function scrollToTop() {
 
 // event listener tombol
 scrollTopBtn.addEventListener("click", scrollToTop);
+
+
 
 

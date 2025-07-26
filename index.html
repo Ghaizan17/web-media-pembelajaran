@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,10 +8,13 @@
     <link rel="shortcut icon" href="/web-media-pembelajaran/images/smkn2.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/web-media-pembelajaran/css/style.css">
 </head>
+
 <body>
     <!-- Header -->
     <div class="navbar navbar-expand-lg bg-navy-custom  py-3 px-3 sticky-top  border-navy-custom" id="dor">
@@ -19,16 +23,17 @@
             <!-- judul dan logo -->
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <i class="bi bi-mortarboard-fill me-2 fs-4 text-info"></i>
-                <span class="d-none d-md-block text-light fw-bold" >Mathtec</span>
+                <span class="d-none d-md-block text-light fw-bold">Mathtec</span>
             </a>
 
             <!-- hamburger -->
-            <button class="navbar-toggler transition-custom border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler transition-custom border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Menu -->
             <div class="collapse navbar-collapse  justify-content-end " id="navbarNav">
-                <ul class="nav nav-underline d-flex gap-lg-4 align-items-center fw-bold">
+                <ul class="nav nav-underline d-flex gap-lg-4 align-items-center fw-semibold mt-4 mt-md-0 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active text-warning" aria-current="page" href="index.html">Beranda</a>
                     </li>
@@ -41,8 +46,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-light hover" href="/web-media-pembelajaran/html/kontak.html">Kontak </a>
                     </li>
-                    <li class="nav-item">
-                        <a onclick="ubah()" class="text-light text-decoration-none" id="nightmode"><i class="fa fa-moon text-warning"></i> Dark</a>
+                    <li class="nav-item" style="width: 70px;">
+                        <a onclick="ubah()" class="text-light text-decoration-none card-btn-custom p-1 "
+                            id="nightmode"><i class="fa fa-moon text-warning"></i><span>Dark</span></a>
                     </li>
 
                 </ul>
@@ -52,18 +58,28 @@
     <main>
         <!-- banner awal -->
         <div class="container-fluid p-0 text-white ">
-            <div class="bg-custom shadow py-5 pt-5 text-white d-flex column  align-items-center  " style="height: 90vh;">
+            <div class="bg-custom shadow py-5 pt-5 text-white d-flex  justify-content-center row align-items-center  "
+                style="height: 90vh;">
                 <div class="container text-center">
+
                     <h2 class="display-4 fw-bold text-shadow-custom">
-                        Selamat Datang di Mathtec 
-                        <i class="bi bi-mortarboard-fill text-info text-shadow-custom"></i> 
+                        Selamat Datang di Mathtec
+                        <i class="bi bi-mortarboard-fill text-info text-shadow-custom"></i>
                     </h2>
                     <p class=" text-shadow-custom fs-5 ">
                         Platform digital untuk belajar dengan mudah, cepat, dan menyenangkan.
                     </p>
-                    <a class="btn btn-warning-custom btn-lg mt-4  px-5 fw-bold button-yellow-custom border-yellow-custom " href="/web-media-pembelajaran/html/materi.html"><i class="bi bi-play-circle-fill "></i> Mulai Belajar</a>
 
-                </div>       
+                    <div class="d-flex justify-content-center row">
+                        <a class="btn-custom btn-warning-custom btn-lg mt-4  px-5 fw-bold button-yellow-custom border-yellow-custom "
+                            style="width: 250px;" href="/web-media-pembelajaran/html/materi.html"><i
+                                class="bi bi-play-circle-fill "></i> Mulai
+                            Belajar</a>
+
+                    </div>
+
+
+                </div>
             </div>
         </div>
 
@@ -71,18 +87,26 @@
             <!-- penjelasan mengenai mathtec -->
             <div class="text-light m-md-3 m-lg-0">
                 <div class="d-flex justify-content-center align-items-center reveal  mt-5 pt-5  ">
-                    <div class="text-start width-custom col-md-4 ps-lg-5 ps-md-0 flex-column justify-content-center mt-5 mt-md-0 align-items-center">
+                    <div
+                        class="text-start width-custom col-md-4 ps-lg-5 ps-md-0 flex-column justify-content-center mt-5 mt-md-0 align-items-center">
                         <h1 class="fw-bold text-warning">Apa itu Mathtec ?</h1>
                         <div class="text-start ">
                             <p class="mt-3 fs-5">
-                                Mathtec adalah sebuah website media pembelajaran inovatif yang dirancang khusus untuk membantu siswa dalam mempelajari Matematika secara digital. Website ini hadir sebagai solusi modern dalam dunia pendidikan dengan menghadirkan berbagai materi pelajaran Matematika yang disajikan secara menarik, interaktif, dan mudah dipahami. Tidak hanya menyuguhkan teori, Mathtec juga dilengkapi dengan berbagai latihan soal, kuis interaktif, dan animasi pembelajaran yang membuat proses belajar menjadi lebih menyenangkan dan tidak membosankan.
+                                Mathtec adalah sebuah website media pembelajaran inovatif yang dirancang khusus untuk
+                                membantu siswa dalam mempelajari Matematika secara digital. Website ini hadir sebagai
+                                solusi modern dalam dunia pendidikan dengan menghadirkan berbagai materi pelajaran
+                                Matematika yang disajikan secara menarik, interaktif, dan mudah dipahami. Tidak hanya
+                                menyuguhkan teori, Mathtec juga dilengkapi dengan berbagai latihan soal, kuis
+                                interaktif, dan animasi pembelajaran yang membuat proses belajar menjadi lebih
+                                menyenangkan dan tidak membosankan.
                             </p>
-            
+
                         </div>
                     </div>
 
-                    <div class="d-none d-md-block">  
-                        <img src="/web-media-pembelajaran/images/perpustakaan.gif" class="rounded-3 card-custom border-custom m-5" width="82%">
+                    <div class="d-none d-md-block">
+                        <img src="/web-media-pembelajaran/images/perpustakaan.gif"
+                            class="rounded-3 card-custom border-custom m-5" width="82%">
                     </div>
                 </div>
             </div>
@@ -90,16 +114,23 @@
             <div class="text-light m-md-3 m-lg-0">
                 <!-- penjelasan kenapa belajar di mathtec -->
                 <div class="d-flex justify-content-center  align-items-center reveal mb-5 pb-5 ">
-                    <div class="d-none d-md-block">  
-                        <img src="/web-media-pembelajaran/images/pixel-belajar.gif" class="rounded-3 card-custom border-custom m-lg-5" width="80%">
+                    <div class="d-none d-md-block">
+                        <img src="/web-media-pembelajaran/images/pixel-belajar.gif"
+                            class="rounded-3 card-custom border-custom m-lg-5" width="80%">
                     </div>
-                    <div class="text-start width-custom col-md-4 ps-lg-5  ps-md-0 flex-column justify-content-center mt-5 mt-md-0 align-items-center pe-md-5">
+                    <div
+                        class="text-start width-custom col-md-4 ps-lg-5  ps-md-0 flex-column justify-content-center mt-5 mt-md-0 align-items-center pe-md-5">
                         <h1 class="fw-bold  text-warning">Kenapa Belajar di sini ?</h1>
                         <div class="text-start ">
                             <p class="mt-3 fs-5">
-                                Karena website ini menyediakan materi pelajaran Matematika yang lengkap dan terstruktur, sesuai dengan kurikulum terbaru yang diterapkan di Indonesia. Setiap materi disusun dengan cermat oleh tim yang berkompeten, sehingga dapat mendukung proses pembelajaran baik di sekolah maupun secara mandiri di rumah. Tidak hanya fokus pada kelengkapan isi, penyajian materi di dalam website ini juga dirancang agar mudah dipahami oleh semua kalangan pelajar, mulai dari tingkat dasar, menengah, hingga lanjutan.
+                                Karena website ini menyediakan materi pelajaran Matematika yang lengkap dan terstruktur,
+                                sesuai dengan kurikulum terbaru yang diterapkan di Indonesia. Setiap materi disusun
+                                dengan cermat oleh tim yang berkompeten, sehingga dapat mendukung proses pembelajaran
+                                baik di sekolah maupun secara mandiri di rumah. Tidak hanya fokus pada kelengkapan isi,
+                                penyajian materi di dalam website ini juga dirancang agar mudah dipahami oleh semua
+                                kalangan pelajar, mulai dari tingkat dasar, menengah, hingga lanjutan.
                             </p>
-            
+
                         </div>
                     </div>
                 </div>
@@ -109,162 +140,180 @@
             <br><br><br>
 
             <!-- fitur utama mathtec -->
-             <div class="container p-0">
-                <div class=" row d-flex mx-2 justify-content-start justify-content-md-center justify-content-lg-center  mb-5 pb-5 reveal">
-                    
+            <div class="container p-0">
+                <div
+                    class=" row d-flex mx-2 justify-content-start justify-content-md-center justify-content-lg-center  mb-5 pb-5 reveal">
+
                     <div class=" text-start px-0 px-md-5 mx-md-5 mb-4">
                         <h2 class="fw-bold text-md-center text-warning mb-md-2 ">Fitur Utama Mathtec</h2>
                         <div class="d-flex justify-content-center text-start text-md-center pe-md-5 ps-md-5 ">
                             <p class=" p-0 p-md-2 pe-md-5 ps-md-5 fs-5">
-                                Karena web ini menyediakan materi matematika yang lengkap, sesuai kurikulum terbaru, serta disajikan dengan cara yang mudah dipahami dan menarik untuk semua jenjang pendidikan.
-                            </p>       
+                                Karena web ini menyediakan materi matematika yang lengkap, sesuai kurikulum terbaru,
+                                serta disajikan dengan cara yang mudah dipahami dan menarik untuk semua jenjang
+                                pendidikan.
+                            </p>
                         </div>
                     </div>
 
-                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 animation-card  py-4 px-4" >
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 animation-card  py-4 px-4">
                         <div class="card bg-black-custom shadow border-custom h-100">
                             <i class="bi bi-laptop text-warning font-70px-custom text-center"></i>
                             <div class="p-1 px-3 text-light">
                                 <h5 class="card-title text-center mb-2 fw-bold">Kukirikulum Terstruktur</h5>
-                                <p class="font-custom text-center">Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
-                            </div>
-                        </div>
-                    </div>     
-
-                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 animation-card  py-4 px-4" >
-                        <div class="card bg-black-custom shadow border-custom h-100 ">
-                            <i class="bi bi-emoji-laughing text-warning font-70px-custom text-center"></i>
-                            <div class=" px-3 text-light">
-                                <h5 class="card-title text-center mb-2 fw-bold">Materi yang Menarik</h5>
-                                <p class="font-custom text-center">Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
+                                <p class="font-custom text-center">Materi pelajaran lengkap dan terstruktur sesuai
+                                    kurikulum.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 animation-card  py-4 px-4" >
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 animation-card  py-4 px-4">
+                        <div class="card bg-black-custom shadow border-custom h-100 ">
+                            <i class="bi bi-emoji-laughing text-warning font-70px-custom text-center"></i>
+                            <div class=" px-3 text-light">
+                                <h5 class="card-title text-center mb-2 fw-bold">Materi yang Menarik</h5>
+                                <p class="font-custom text-center">Materi pelajaran lengkap dan terstruktur sesuai
+                                    kurikulum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 animation-card  py-4 px-4">
                         <div class="card bg-black-custom shadow border-custom h-100">
                             <i class="bi bi-journal-text text-warning font-70px-custom text-center"></i>
                             <div class="p-1 px-3 text-light">
                                 <h5 class="card-title text-center mb-2 fw-bold">Kuis Interaktif</h5>
-                                <p class="font-custom text-center">Materi pelajaran lengkap dan terstruktur sesuai kurikulum.</p>
+                                <p class="font-custom text-center">Materi pelajaran lengkap dan terstruktur sesuai
+                                    kurikulum.</p>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-             </div>
+            </div>
 
             <br><br>
 
-            
+
             <!-- preview materi -->
             <h4 class="text-center text-warning mb-3 mt-5 pt-5">Mulailah Pembelajaran Matematika Kamu Hari Ini 😎</h4>
             <div class="container d-flex justify-content-center mb-5">
-                <p class="text-center">Bergabunglah dengan Mathtec dan temukan dunia pembelajaran matematika yang interaktif dan menyenangkan. </p>
+                <p class="text-center">Bergabunglah dengan Mathtec dan temukan dunia pembelajaran matematika yang
+                    interaktif dan menyenangkan. </p>
             </div>
             <div class="container konten active mb-3 " id="konten1">
                 <div class=" row d-flex mx-2 " id="cardContainer">
 
                     <!-- AND -->
-                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
                         <a href="/web-media-pembelajaran/html/and.html" class="text-decoration-none">
                             <div class="card bg-dark-custom shadow border-custom h-100">
                                 <img src="/web-media-pembelajaran/images/AND.gif" class="card-img-top" alt="...">
                                 <div class="card-body text-light">
                                     <h5 class="card-title ">AND</h5>
                                     <p class="card-text">Salah satu jenis dari gerbang logika </p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                                    <span class="p-1 px-3 border rounded-5 font-custom"><i
+                                            class="fa-solid fa-chart-simple"></i> Mudah</span>
                                 </div>
                             </div>
                         </a>
-                        
+
                     </div>
 
                     <!-- EKSPONEN -->
-                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
                         <a href="/web-media-pembelajaran/html/eksponen.html" class="text-decoration-none">
                             <div class="card bg-dark-custom shadow border-custom h-100">
                                 <img src="/web-media-pembelajaran/images/eksponen.gif" class="card-img-top" alt="...">
                                 <div class="card-body text-light">
                                     <h5 class="card-title ">Eksponen</h5>
                                     <p class="card-text">Salah satu jenis dari gerbang logika </p>
-                                    <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                                    <span class="p-1 px-3 border rounded-5 font-custom"><i
+                                            class="fa-solid fa-chart-simple"></i> Mudah</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                   <!-- Bentuk akar -->
-                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                    <!-- Bentuk akar -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
                         <a class="text-decoration-none" href="/web-media-pembelajaran/html/bentuk-akar.html">
                             <div class="card bg-dark-custom shadow border-custom h-100">
-                            <img src="/web-media-pembelajaran/images/bentuk-akar.gif" class="card-img-top" alt="...">
-                            <div class="card-body text-light">
-                                <h5 class="card-title ">Bentuk Akar</h5>
-                                <p class="card-text">Penjelasan bentuk akar</p>
-                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                                <img src="/web-media-pembelajaran/images/bentuk-akar.gif" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-light">
+                                    <h5 class="card-title ">Bentuk Akar</h5>
+                                    <p class="card-text">Penjelasan bentuk akar</p>
+                                    <span class="p-1 px-3 border rounded-5 font-custom"><i
+                                            class="fa-solid fa-chart-simple"></i> Mudah</span>
+                                </div>
                             </div>
-                        </div>
                         </a>
-                        
+
                     </div>
 
                     <!-- Barisan aritmatika -->
-                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4" >
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-3 materi-card py-4 px-4">
                         <div class="card bg-dark-custom shadow border-custom h-100">
                             <img src="/web-media-pembelajaran/images/eksponen.gif" class="card-img-top" alt="...">
                             <div class="card-body text-light">
                                 <h5 class="card-title ">Barisan Aritmatika</h5>
                                 <p class="card-text">salah satu macam dari Aritmatika</p>
-                                <span class="p-1 px-3 border rounded-5 font-custom"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                                <span class="p-1 px-3 border rounded-5 font-custom"><i
+                                        class="fa-solid fa-chart-simple"></i> Mudah</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center mb-5">
-                <a class="btn btn-warning-custom mt-3 px-5  fw-bold button-yellow-custom border-yellow-custom " href="/web-media-pembelajaran/html/materi.html">Selengkapnya</a>
+                <a class="btn btn-warning-custom mt-3 px-5  fw-bold button-yellow-custom border-yellow-custom "
+                    href="/web-media-pembelajaran/html/materi.html">Selengkapnya</a>
             </div>
 
-            
+
             <br>
             <br>
-        
+
         </div>
         <!-- button scroll to top -->
-        <button id="scrollTopBtn" class="btn bg-warning shadow border-0 rounded-circle"><i class="bi bi-arrow-up fs-5"></i></button>
+        <button id="scrollTopBtn" class="btn bg-warning shadow border-0 rounded-circle"><i
+                class="bi bi-arrow-up fs-5"></i></button>
     </main>
     <!-- footer -->
     <footer class="bg-dark-custom text-light pt-5 pb-4 mt-5 border-top-navy-custom">
         <div class="container mb-5 d-flex justify-content-between">
             <div class="d-flex gap-2 fs-2 ">
-                <i class="bi bi-mortarboard-fill text-info"></i> 
+                <i class="bi bi-mortarboard-fill text-info"></i>
                 <span class="fw-bold">Mathtec</span>
             </div>
         </div>
-        
+
         <div class="container text-md-left">
             <div class="row text-md-left">
 
-                  <!-- Kolom 1: Brand -->
+                <!-- Kolom 1: Brand -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Tentang Mathtec</h5>
-                    <p>Mathtec adalah sebuah website media pembelajaran untuk belajar Matematika secara digital yang memiliki tampilan yang menarik dan tidak membosankan </p>
+                    <p>Mathtec adalah sebuah website media pembelajaran untuk belajar Matematika secara digital yang
+                        memiliki tampilan yang menarik dan tidak membosankan </p>
                 </div>
 
                 <!-- Kolom 2: Bantuan -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-warning">LInk Terkait</h5>
-                    <p><a href="https://smkn2-bjm.sch.id/" class="text-light text-decoration-none">SMKN2 Banjarmasin</a></p>
-                    <p><a href="https://ghaizan17.github.io/e-PKL/" class="text-light text-decoration-none">e-PKL</a></p>
+                    <p><a href="https://smkn2-bjm.sch.id/" class="text-light text-decoration-none">SMKN2 Banjarmasin</a>
+                    </p>
+                    <p><a href="https://ghaizan17.github.io/e-PKL/" class="text-light text-decoration-none">e-PKL</a>
+                    </p>
 
                 </div>
 
                 <!-- Kolom 3: Kontak -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Kontak</h5>
-                    <p><i class="bi bi-geo-alt-fill me-2"></i> Jl. Brigjend H. Hasan Basri No. 6 Kayutangi Banjarmasin</p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Jl. Brigjend H. Hasan Basri No. 6 Kayutangi Banjarmasin
+                    </p>
                     <p><i class="bi bi-whatsapp me-1"></i> +62 812-3456-7890</p>
                     <p><i class="bi bi-envelope-at-fill me-2"></i>ghaizan17@gmail.com</p>
                 </div>
@@ -274,18 +323,20 @@
 
             <!-- Copyright -->
             <div class="row align-items-center">
-            <div class="col-md-7 col-lg-8 mt-4">
-                <p class="text-center text-md-start">&copy; 2025 by SMKN 2 Banjarmasin <a href="#">Terms</a> <a href="http://">Privacy Policy</a></p>
-            </div>
-
-            <div class="col-md-5 col-lg-4 fs-4 text-center ">
-                <div class="text-top text-md-end">
-                <a href="https://www.instagram.com/gejjjan?igsh=M2d5ZDhyNXNobWcy" class="text-light me-3 "><i class="bi- bi-instagram"></i></a>
-                <a href="https://github.com/Ghaizan17" class="text-light me-3"><i class="bi bi-github"></i></a>
-                <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+                <div class="col-md-7 col-lg-8 mt-4">
+                    <p class="text-center text-md-start">&copy; 2025 by SMKN 2 Banjarmasin <a href="#">Terms</a> <a
+                            href="http://">Privacy Policy</a></p>
                 </div>
-            </div>
+
+                <div class="col-md-5 col-lg-4 fs-4 text-center ">
+                    <div class="text-top text-md-end">
+                        <a href="https://www.instagram.com/gejjjan?igsh=M2d5ZDhyNXNobWcy" class="text-light me-3 "><i
+                                class="bi- bi-instagram"></i></a>
+                        <a href="https://github.com/Ghaizan17" class="text-light me-3"><i class="bi bi-github"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -327,4 +378,5 @@
 
     </script>
 </body>
+
 </html>
