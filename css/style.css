@@ -369,6 +369,62 @@ main {
     transition: all 0.3s;
 }
 
+.card-btn-search-custom {
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-left: 1px solid #687d8b;
+    border-width: 3px;
+    border-color: rgb(255, 149, 0);
+    border-bottom: double rgb(255, 149, 0);
+    border-bottom-width: 6px;
+}
+
+.card-btn-search-custom:active {
+    border-bottom: 2px solid rgb(255, 149, 0);
+
+}
+
+.btn-lg-custom {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+
 .margin-custom {
     margin-top: 40px;
 }
@@ -607,6 +663,12 @@ img {
     color: white !important;
 }
 
+.light-mode .btn-warning {
+    color: #ffffff !important;
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+}
+
 .light-mode .button-yellow-custom {
     background-color: #0d6efd !important;
 }
@@ -627,6 +689,11 @@ img {
     color: #000;
 }
 
+.light-mode .btn-outline-light {
+    color: #000 !important;
+    border-color: #ccc !important;
+}
+
 .light-mode .font-custom,
 .light-mode h5,
 .light-mode h4 {
@@ -640,6 +707,14 @@ img {
 .light-mode #scrollTopBtn {
     background-color: #0d6efd;
     color: #fff;
+}
+
+.light-mode .card-btn-search-custom {
+    border-left: 1px solid #ccc;
+    border-width: 3px;
+    border-color: #ccc;
+    border-bottom: double #ccc;
+    border-bottom-width: 6px;
 }
 
 

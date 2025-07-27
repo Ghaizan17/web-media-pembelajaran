@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,15 @@
     <link rel="shortcut icon" href="/web-media-pembelajaran/images/smkn2.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/style.css">
-    
-    
+
+
 </head>
+
 <body>
     <!-- Header -->
     <div class="navbar navbar-expand-lg bg-navy-custom py-3 px-3 sticky-top border-navy-custom">
@@ -21,7 +25,7 @@
             <!-- judul dan logo -->
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <i class="bi bi-mortarboard-fill me-2 fs-4 text-info"></i>
-                <span class="d-none d-md-block text-light">Mathtec</span>
+                <span class="d-none d-md-block text-light fw-bold">Mathtec</span>
             </a>
 
             <!-- hamburger -->
@@ -32,7 +36,8 @@
             <div class="collapse navbar-collapse  justify-content-end " id="navbarNav">
                 <ul class="nav nav-underline d-flex gap-lg-4 align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link text-light" aria-current="page" href="/web-media-pembelajaran/index.html">Beranda</a>
+                        <a class="nav-link text-light" aria-current="page"
+                            href="/web-media-pembelajaran/index.html">Beranda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="materi.html">Materi</a>
@@ -43,10 +48,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-light hover" href="kontak.html">Kontak </a>
                     </li>
-                    <li class="nav-item">
-                        <a onclick="ubah()" id="nightmode" class="text-light text-decoration-none">
-                            <i class="fa fa-moon  text-light"></i> Dark
-                        </a>
+                    <li class="nav-item" style="width: 70px;">
+                        <a onclick="ubah()" class="text-light text-decoration-none card-btn-custom p-1 "
+                            id="nightmode"><i class="fa fa-moon text-warning"></i><span>Dark</span></a>
                     </li>
                 </ul>
             </div>
@@ -54,11 +58,14 @@
     </div>
     <main>
         <div class="container-fluid p-0 text-white mb-5">
-            <div class="bg-and-custom shadow py-5 pt-5 text-white d-flex column align-items-center mb-5  " style="height: 86vh;">
+            <div class="bg-and-custom shadow py-5 pt-5 text-white d-flex column align-items-center mb-5  "
+                style="height: 86vh;">
                 <div class="container text-center text-md-start opacity-custom ">
-                    <span class="p-1 px-5 py-2 border 5 rounded-5 fs-6"><i class="fa-solid fa-chart-simple"></i> Mudah</span>
+                    <span class="p-1 px-5 py-2 border 5 rounded-5 fs-6"><i class="fa-solid fa-chart-simple"></i>
+                        Mudah</span>
                     <h2 class="display-4 fw-bold text-shadow-custom mt-4">AND</h2>
-                    <p class=" fs-4 text-shadow-custom ">Belajar salah satu jenis dari gerbang logika yaitu gerbang AND</p>
+                    <p class=" fs-4 text-shadow-custom ">Belajar salah satu jenis dari gerbang logika yaitu gerbang AND
+                    </p>
                     <!-- <a class="btn btn-warning btn-lg mt-3 px-5  fw-bold button-yellow-custom border-yellow-custom " href="materi.html">Mulai </a> -->
                 </div>
             </div>
@@ -89,28 +96,30 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>   
+                </div>
             </div>
             <div class="container text-light">
                 <h3 class="mb-5"><i class="bi bi-search "></i> Pengertian Gerbang Logika AND</h3>
                 <p>
-                    Gerbang logika AND adalah salah satu gerbang logika dasar dalam sistem digital yang digunakan untuk memproses dua atau lebih sinyal input dan menghasilkan satu sinyal output.
+                    Gerbang logika AND adalah salah satu gerbang logika dasar dalam sistem digital yang digunakan untuk
+                    memproses dua atau lebih sinyal input dan menghasilkan satu sinyal output.
                 </p>
                 <div class="contianer mb-4">
                     <span class="mb-5"><strong>Gambar Gerbang Logika AND :</strong></span><br><br>
                     <img class="rounded-2" src="/web-media-pembelajaran/images/gerbang-and.png" alt="">
                 </div>
                 <p>Prinsip kerjanya: <br>
-                    <span class="fw-bold">  Output akan bernilai 1 (benar) hanya jika semua input bernilai 1 (benar). <br></span>
+                    <span class="fw-bold"> Output akan bernilai 1 (benar) hanya jika semua input bernilai 1 (benar).
+                        <br></span>
                     Jika ada satu saja input bernilai 0 (salah), maka output-nya 0.
                 </p>
             </div>
             <div class="container my-5">
                 <div class="ratio ratio-16x9">
-                    <iframe class="rounded-3  shadow" src="https://www.youtube.com/embed/LiqmFy0GRnw?si=SBrz9xojnbnfNQtb"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
+                    <iframe class="rounded-3  shadow"
+                        src="https://www.youtube.com/embed/LiqmFy0GRnw?si=SBrz9xojnbnfNQtb" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
                     </iframe>
                 </div>
             </div>
@@ -159,7 +168,7 @@
                 <form id="quizForm">
                     <!-- Soal 1 -->
                     <div class="mb-4">
-                        <p><strong>1.  Jika input A adalah 0 dan input B adalah 1 maka ouputnya adalah... ?</strong></p>
+                        <p><strong>1. Jika input A adalah 0 dan input B adalah 1 maka ouputnya adalah... ?</strong></p>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="q1" id="q1a" value="0">
                             <label class="form-check-label" for="q1a">0</label>
@@ -181,20 +190,28 @@
                     <div class="mb-4">
                         <p><strong>2. Bagaimana cara kerja gerbang AND?</strong></p>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q2" id="q2a" value="2Jika kedua input bernilai 1 maka ouputnya bernilai 0">
-                            <label class="form-check-label" for="q2a">Jika kedua input bernilai 1 maka ouputnya bernilai 0 </label>
+                            <input class="form-check-input" type="radio" name="q2" id="q2a"
+                                value="2Jika kedua input bernilai 1 maka ouputnya bernilai 0">
+                            <label class="form-check-label" for="q2a">Jika kedua input bernilai 1 maka ouputnya bernilai
+                                0 </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q2" id="q2b" value="Jika salah satu input bernilai 1 maka ouputnya bernilai 1">
-                            <label class="form-check-label" for="q2b">Jika salah satu input bernilai 1 maka ouputnya bernilai 1</label>
+                            <input class="form-check-input" type="radio" name="q2" id="q2b"
+                                value="Jika salah satu input bernilai 1 maka ouputnya bernilai 1">
+                            <label class="form-check-label" for="q2b">Jika salah satu input bernilai 1 maka ouputnya
+                                bernilai 1</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q2" id="q2c" value="Jika kedua input bernilai 0 maka ouputnya bernilai 1">
-                            <label class="form-check-label" for="q2c">Jika kedua input bernilai 0 maka ouputnya bernilai 1</label>
+                            <input class="form-check-input" type="radio" name="q2" id="q2c"
+                                value="Jika kedua input bernilai 0 maka ouputnya bernilai 1">
+                            <label class="form-check-label" for="q2c">Jika kedua input bernilai 0 maka ouputnya bernilai
+                                1</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q2" id="q2d" value="Jika kedua input bernilai 1 maka outputnya bernilai 1">
-                            <label class="form-check-label" for="q2d">Jika kedua input bernilai 1 maka outputnya bernilai 1</label>
+                            <input class="form-check-input" type="radio" name="q2" id="q2d"
+                                value="Jika kedua input bernilai 1 maka outputnya bernilai 1">
+                            <label class="form-check-label" for="q2d">Jika kedua input bernilai 1 maka outputnya
+                                bernilai 1</label>
                         </div>
                     </div>
                     <!-- Soal 3 -->
@@ -220,7 +237,8 @@
 
                     <!-- Progress Bar -->
                     <div class="progress mb-3">
-                        <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">0%</div>
+                        <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;"
+                            aria-valuemin="0" aria-valuemax="100">0%</div>
                     </div>
 
                     <!-- Buttons -->
@@ -239,13 +257,15 @@
                 <div class="modal-content bg-navy-custom text-white border-custom ">
                     <div class="modal-header border-0">
                         <h5 class="modal-title text-warning" id="modalWarningLabel">Peringatan</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Tutup"></button>
                     </div>
                     <div class="modal-body bg-dark-custom">
                         Silakan jawab semua pertanyaan terlebih dahulu sebelum mengirim!
                     </div>
                     <div class="modal-footer border-0 bg-dark-custom">
-                        <button type="button" class="btn btn-warning transition-custom" data-bs-dismiss="modal">Oke</button>
+                        <button type="button" class="btn btn-warning transition-custom"
+                            data-bs-dismiss="modal">Oke</button>
                     </div>
                 </div>
             </div>
@@ -257,7 +277,8 @@
                 <div class="modal-content bg-navy-custom text-light border-custom">
                     <div class="modal-header border-0">
                         <h5 class="modal-title text-warning" id="modalScoreLabel">Hasil Nilai</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Tutup"></button>
                     </div>
                     <div class="modal-body bg-dark-custom">
                         <p id="scoreText">Nilai kamu: 0%</p>
@@ -305,40 +326,45 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- button scroll to top -->
-    <button id="scrollTopBtn" class="btn bg-warning shadow border-0 rounded-circle"><i class="bi bi-arrow-up fs-5"></i></button>
+        </div>
+        <!-- button scroll to top -->
+        <button id="scrollTopBtn" class="btn bg-warning shadow border-0 rounded-circle"><i
+                class="bi bi-arrow-up fs-5"></i></button>
     </main>
     <!-- footer -->
     <footer class="bg-dark-custom text-light pt-5 pb-4 mt-5">
         <div class="container mb-5 d-flex justify-content-between">
             <div class="d-flex gap-2 fs-2 ">
-                <i class="bi bi-mortarboard-fill text-info"></i> 
+                <i class="bi bi-mortarboard-fill text-info"></i>
                 <span class="fw-bold">Mathtec</span>
             </div>
         </div>
-        
+
         <div class="container text-md-left">
             <div class="row text-md-left">
 
-                  <!-- Kolom 1: Brand -->
+                <!-- Kolom 1: Brand -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Tentang Mathtec</h5>
-                    <p>Mathtec adalah sebuah website media pembelajaran untuk belajar Matematika secara digital yang memiliki tampilan yang menarik dan tidak membosankan </p>
+                    <p>Mathtec adalah sebuah website media pembelajaran untuk belajar Matematika secara digital yang
+                        memiliki tampilan yang menarik dan tidak membosankan </p>
                 </div>
 
                 <!-- Kolom 2: Bantuan -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-warning">LInk Terkait</h5>
-                    <p><a href="https://smkn2-bjm.sch.id/" class="text-light text-decoration-none">SMKN2 Banjarmasin</a></p>
-                    <p><a href="https://ghaizan17.github.io/e-PKL/" class="text-light text-decoration-none">e-PKL</a></p>
+                    <p><a href="https://smkn2-bjm.sch.id/" class="text-light text-decoration-none">SMKN2 Banjarmasin</a>
+                    </p>
+                    <p><a href="https://ghaizan17.github.io/e-PKL/" class="text-light text-decoration-none">e-PKL</a>
+                    </p>
 
                 </div>
 
                 <!-- Kolom 3: Kontak -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Kontak</h5>
-                    <p><i class="bi bi-geo-alt-fill me-2"></i> Jl. Brigjend H. Hasan Basri No. 6 Kayutangi Banjarmasin</p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Jl. Brigjend H. Hasan Basri No. 6 Kayutangi Banjarmasin
+                    </p>
                     <p><i class="bi bi-whatsapp me-1"></i> +62 812-3456-7890</p>
                     <p><i class="bi bi-envelope-at-fill me-2"></i>ghaizan17@gmail.com</p>
                 </div>
@@ -348,18 +374,20 @@
 
             <!-- Copyright -->
             <div class="row align-items-center">
-            <div class="col-md-7 col-lg-8 mt-4">
-                <p class="text-center text-md-start">&copy; 2025 by SMKN 2 Banjarmasin <a href="#">Terms</a> <a href="http://">Privacy Policy</a></p>
-            </div>
-
-            <div class="col-md-5 col-lg-4 fs-4 text-center ">
-                <div class="text-top text-md-end">
-                <a href="https://www.instagram.com/gejjjan?igsh=M2d5ZDhyNXNobWcy" class="text-light me-3 "><i class="bi- bi-instagram"></i></a>
-                <a href="https://github.com/Ghaizan17" class="text-light me-3"><i class="bi bi-github"></i></a>
-                <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+                <div class="col-md-7 col-lg-8 mt-4">
+                    <p class="text-center text-md-start">&copy; 2025 by SMKN 2 Banjarmasin <a href="#">Terms</a> <a
+                            href="http://">Privacy Policy</a></p>
                 </div>
-            </div>
+
+                <div class="col-md-5 col-lg-4 fs-4 text-center ">
+                    <div class="text-top text-md-end">
+                        <a href="https://www.instagram.com/gejjjan?igsh=M2d5ZDhyNXNobWcy" class="text-light me-3 "><i
+                                class="bi- bi-instagram"></i></a>
+                        <a href="https://github.com/Ghaizan17" class="text-light me-3"><i class="bi bi-github"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -367,26 +395,26 @@
     <script src="../js/script.js"></script>
     <script>
         const btnKirim = document.getElementById('btnKirim');
-            const btnCobaLagi = document.getElementById('btnCobaLagi');
-            const progressBar = document.getElementById('progressBar');
-            const quizForm = document.getElementById('quizForm');
+        const btnCobaLagi = document.getElementById('btnCobaLagi');
+        const progressBar = document.getElementById('progressBar');
+        const quizForm = document.getElementById('quizForm');
 
-            const correctAnswers = {
+        const correctAnswers = {
             q1: "1",
             q2: "Jika kedua input bernilai 1 maka outputnya bernilai 1",
             q3: "0"
-            };
+        };
 
-            const modalWarning = new bootstrap.Modal(document.getElementById('modalWarning'));
-            const modalScore = new bootstrap.Modal(document.getElementById('modalScore'));
-            const modalConfirmSend = new bootstrap.Modal(document.getElementById('modalConfirmSend'));
-            const modalConfirmRetry = new bootstrap.Modal(document.getElementById('modalConfirmRetry'));
-            const scoreText = document.getElementById('scoreText');
+        const modalWarning = new bootstrap.Modal(document.getElementById('modalWarning'));
+        const modalScore = new bootstrap.Modal(document.getElementById('modalScore'));
+        const modalConfirmSend = new bootstrap.Modal(document.getElementById('modalConfirmSend'));
+        const modalConfirmRetry = new bootstrap.Modal(document.getElementById('modalConfirmRetry'));
+        const scoreText = document.getElementById('scoreText');
 
-            let answered = false;
+        let answered = false;
 
-            // Tombol Kirim
-            btnKirim.addEventListener('click', () => {
+        // Tombol Kirim
+        btnKirim.addEventListener('click', () => {
             if (answered) return;
 
             let total = Object.keys(correctAnswers).length;
@@ -402,17 +430,17 @@
             }
 
             modalConfirmSend.show();
-            });
+        });
 
-            // Setelah konfirmasi kirim
-            document.getElementById('confirmSendYes').addEventListener('click', () => {
+        // Setelah konfirmasi kirim
+        document.getElementById('confirmSendYes').addEventListener('click', () => {
             modalConfirmSend.hide();
 
             let correctCount = 0;
             for (let key in correctAnswers) {
                 const selected = quizForm.querySelector(`input[name="${key}"]:checked`);
                 if (selected && selected.value === correctAnswers[key]) {
-                correctCount++;
+                    correctCount++;
                 }
             }
 
@@ -434,15 +462,15 @@
             quizForm.querySelectorAll('input[type="radio"]').forEach(input => {
                 input.disabled = true;
             });
-            });
+        });
 
-            // Tombol Coba Lagi
-            btnCobaLagi.addEventListener('click', () => {
+        // Tombol Coba Lagi
+        btnCobaLagi.addEventListener('click', () => {
             modalConfirmRetry.show();
-            });
+        });
 
-            // Setelah konfirmasi coba lagi
-            document.getElementById('confirmRetryYes').addEventListener('click', () => {
+        // Setelah konfirmasi coba lagi
+        document.getElementById('confirmRetryYes').addEventListener('click', () => {
             modalConfirmRetry.hide();
             quizForm.reset();
             progressBar.style.width = '0%';
@@ -452,7 +480,8 @@
             quizForm.querySelectorAll('input[type="radio"]').forEach(input => {
                 input.disabled = false;
             });
-            });
+        });
     </script>
 </body>
+
 </html>
